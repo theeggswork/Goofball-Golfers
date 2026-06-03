@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d0hgff003xq4r"]
+
+[ext_resource type="Script" uid="uid://ccgdie0mgw8wf" path="res://Scripts/GolfScript.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://d0eldqsqariep" path="res://Assets/Ball.png" id="1_xhfnw"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kpjcp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kpjcp"]
+
+[node name="Player" type="RigidBody2D" unique_id=1666780814]
+physics_material_override = SubResource("PhysicsMaterial_kpjcp")
+script = ExtResource("1_kpjcp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=216202879]
+scale = Vector2(6, 6)
+shape = SubResource("CircleShape2D_kpjcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=930047070]
+texture_filter = 1
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("1_xhfnw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1841514432]
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1737696216]
+show_behind_parent = true
+width = 20.0

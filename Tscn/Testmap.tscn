@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b2pmlxmfkf4ub"]
+
+[ext_resource type="PackedScene" uid="uid://d0hgff003xq4r" path="res://Tscn/Player.tscn" id="1_rf04y"]
+[ext_resource type="PackedScene" uid="uid://cefcleb22ylx6" path="res://Tscn/PlaceholderObject.tscn" id="2_yc6sp"]
+
+[node name="Testmap" type="Node2D" unique_id=581708526]
+
+[node name="Player" parent="." unique_id=1666780814 instance=ExtResource("1_rf04y")]
+
+[node name="PlaceholderObject" parent="." unique_id=1328187938 instance=ExtResource("2_yc6sp")]
+texture_filter = 1
+position = Vector2(0, 386)
+scale = Vector2(16.898191, 0.6)
+
+[node name="PlaceholderObject6" parent="." unique_id=185290105 instance=ExtResource("2_yc6sp")]
+texture_filter = 1
+position = Vector2(0, -259.99994)
+scale = Vector2(30.279997, 0.6)
+
+[node name="PlaceholderObject2" parent="." unique_id=1260800413 instance=ExtResource("2_yc6sp")]
+texture_filter = 1
+position = Vector2(464, 342)
+rotation = -0.32119945
+scale = Vector2(7.169819, 0.6)
+
+[node name="PlaceholderObject3" parent="." unique_id=702903144 instance=ExtResource("2_yc6sp")]
+position = Vector2(579.00006, -39.000004)
+scale = Vector2(0.7005094, 17.480001)
+
+[node name="PlaceholderObject4" parent="." unique_id=1620657573 instance=ExtResource("2_yc6sp")]
+texture_filter = 1
+position = Vector2(-457, 342)
+rotation = 0.31415927
+scale = Vector2(7.169819, 0.6)
+
+[node name="PlaceholderObject5" parent="." unique_id=1464557458 instance=ExtResource("2_yc6sp")]
+position = Vector2(-569, -39)
+scale = Vector2(0.7005094, 17.480001)
