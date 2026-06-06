@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="Goofball Golfing"
-config/description="A golf game. Literally my first project please don't judge."
+config/description="Golf Game."
 run/main_scene="uid://b2pmlxmfkf4ub"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://rl0gmgekd0lu"
 
 [display]
 
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [input]

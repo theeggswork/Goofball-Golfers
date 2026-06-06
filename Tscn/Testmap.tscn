@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d0hgff003xq4r" path="res://Tscn/Player.tscn" id="1_rf04y"]
 [ext_resource type="PackedScene" uid="uid://cefcleb22ylx6" path="res://Tscn/PlaceholderObject.tscn" id="2_yc6sp"]
+[ext_resource type="PackedScene" uid="uid://cxrbn0ge4ms6h" path="res://Tscn/WinCondition.tscn" id="3_4pc0y"]
 
 [node name="Testmap" type="Node2D" unique_id=581708526]
 
@@ -36,3 +37,6 @@ scale = Vector2(7.169819, 0.6)
 [node name="PlaceholderObject5" parent="." unique_id=1464557458 instance=ExtResource("2_yc6sp")]
 position = Vector2(-569, -39)
 scale = Vector2(0.7005094, 17.480001)
+
+[node name="WinCondition" parent="." unique_id=1482428891 instance=ExtResource("3_4pc0y")]
+position = Vector2(269, 320)

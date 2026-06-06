@@ -1,10 +1,15 @@
 extends RigidBody2D
 @onready var cam = $Camera2D
 @onready var line = get_tree().current_scene.get_node("Player/Line2D")
+@onready var wincond = get_tree().current_scene.get_node("WinCondition")
+@onready var winaudio = $WinAudio
 var mat = PhysicsMaterial.new()
 var linecolor;
+var stretch_enabled = true
+var stretch;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_to_group("Player")
 	mat.bounce = 0.3
 	mat.friction = 0
 	physics_material_override = mat
@@ -18,10 +23,12 @@ func _physics_process(delta: float) -> void:
 	# Visuals
 	var speed = abs(linear_velocity.length())
 	var dirchange = linear_velocity.normalized()
-	var stretch = clamp(speed * 0.0001,0,0.25)
+	if stretch_enabled:
+		stretch = clamp(speed * 0.0001,0,0.25)
 	if speed > 1:
 		rotation = dirchange.angle()
-		scale = Vector2(1 + (stretch * 1.3), 1 - (stretch * 1.3))
+		if stretch_enabled:
+			scale = Vector2(1 + (stretch * 1.3), 1 - (stretch * 1.3))
 	# Putting System
 	var can_hit = linear_velocity.length() < 90
 	var mouse_pos = get_global_mouse_position()
@@ -58,3 +65,14 @@ func draw_custom_line(start_pos: Vector2, end_pos: Vector2):
 	line.clear_points()
 	line.add_point(line.to_local(start_pos))
 	line.add_point(line.to_local(end_pos))
+func flag_reached():
+	var tween = create_tween()
+	stretch_enabled = false
+	scale = Vector2.ONE
+	set_deferred("freeze", true)
+	tween.tween_property(self, "position", Vector2(wincond.position.x, wincond.position.y), 0.5)\
+	.set_trans(Tween.TRANS_BOUNCE)\
+	.set_ease(Tween.EASE_OUT)
+	tween = create_tween()
+	tween.tween_property(self, "modulate:a", 0.0, 1.0)
+	winaudio.play()
