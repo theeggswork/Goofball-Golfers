@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://drv416k5abko7"]
+
+[ext_resource type="Script" uid="uid://bwuen3r1o12aj" path="res://Scripts/HUD.gd" id="1_msu7g"]
+
+[node name="HUD" type="CanvasLayer" unique_id=2069383963]
+
+[node name="Control" type="Control" parent="." unique_id=933775425]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_msu7g")
+
+[node name="TotalPutts" type="Label" parent="Control" unique_id=1958165944]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 4.0
+offset_right = 166.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 30
+text = "Total Putts"
+
+[node name="TimeTaken" type="Label" parent="Control" unique_id=981108494]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 49.0
+offset_right = 166.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 30
+text = "Time Taken"
+
+[node name="Frenzy" type="ProgressBar" parent="Control" unique_id=2105793348]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_left = 9.0
+offset_top = 100.0
+offset_right = 209.0
+offset_bottom = 127.0
+
+[node name="Demo" type="Label" parent="Control" unique_id=1885158358]
+layout_mode = 0
+offset_top = 625.0
+offset_right = 296.0
+offset_bottom = 648.0
+text = "Demo Build 6626 -- Subject To Change. Music by my friend."

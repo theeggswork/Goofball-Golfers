@@ -3,31 +3,47 @@ extends RigidBody2D
 @onready var line = get_tree().current_scene.get_node("Player/Line2D")
 @onready var wincond = get_tree().current_scene.get_node("WinCondition")
 @onready var winaudio = $WinAudio
+@onready var bgmusic = $BackgroundMusic
 var mat = PhysicsMaterial.new()
+var frenzy = false
+var frenzycounter = 100
+var totalputts = 0
 var linecolor;
-var stretch_enabled = true
+var gamefunc_enabled = true
 var stretch;
+var speed = 0
+var dirchange = 0
+var timetaken = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	add_to_group("Player")
 	mat.bounce = 0.3
 	mat.friction = 0
 	physics_material_override = mat
+	bgmusic.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	# My codes messy i know get used to it.
+	if Input.is_action_just_released("activatefrenzy"):
+		frenzy = true
+	if frenzy:
+		frenzycounter -= 10 * delta
+		if frenzycounter <= 0:
+			frenzycounter = 0
+			frenzy = false
 	
 func _physics_process(delta: float) -> void:
 	# Visuals
-	var speed = abs(linear_velocity.length())
-	var dirchange = linear_velocity.normalized()
-	if stretch_enabled:
+	if gamefunc_enabled:
+		timetaken += delta
+		speed = abs(linear_velocity.length())
+		dirchange = linear_velocity.normalized()
 		stretch = clamp(speed * 0.0001,0,0.25)
 	if speed > 1:
 		rotation = dirchange.angle()
-		if stretch_enabled:
+		if gamefunc_enabled:
 			scale = Vector2(1 + (stretch * 1.3), 1 - (stretch * 1.3))
 	# Putting System
 	var can_hit = linear_velocity.length() < 90
@@ -35,12 +51,15 @@ func _physics_process(delta: float) -> void:
 	var direction = mouse_pos - global_position
 	if Input.is_action_just_released("Putt"):
 		line.clear_points()
-		if can_hit:
+		if frenzy:
+			apply_central_impulse(direction * 3)
+		elif can_hit:
+			totalputts += 1
 			apply_central_impulse(direction * 5)
 	if Input.is_action_just_pressed("SlamDown"):
 		linear_velocity.y += 300
 	if Input.is_action_pressed("Putt"):
-		if can_hit:
+		if can_hit or frenzy:
 			line.default_color = Color(0.542, 1.0, 0.511, 1.0)
 		else:
 			line.default_color = Color(1.0, 0.451, 0.382, 1.0)
@@ -67,7 +86,7 @@ func draw_custom_line(start_pos: Vector2, end_pos: Vector2):
 	line.add_point(line.to_local(end_pos))
 func flag_reached():
 	var tween = create_tween()
-	stretch_enabled = false
+	gamefunc_enabled = false
 	scale = Vector2.ONE
 	set_deferred("freeze", true)
 	tween.tween_property(self, "position", Vector2(wincond.position.x, wincond.position.y), 0.5)\
