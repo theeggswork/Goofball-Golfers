@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://ccgdie0mgw8wf" path="res://Scripts/GolfScript.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://d0eldqsqariep" path="res://Assets/Ball.png" id="1_xhfnw"]
 [ext_resource type="AudioStream" uid="uid://cub0lydn7fbnx" path="res://Assets/Music/Tada.wav" id="3_kudba"]
-[ext_resource type="AudioStream" uid="uid://hu7chinq4c6r" path="res://Assets/Music/golf.mp3" id="4_s726c"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kpjcp"]
 
@@ -31,7 +30,3 @@ width = 20.0
 
 [node name="WinAudio" type="AudioStreamPlayer2D" parent="." unique_id=893602278]
 stream = ExtResource("3_kudba")
-
-[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=1568140446]
-stream = ExtResource("4_s726c")
-parameters/looping = true

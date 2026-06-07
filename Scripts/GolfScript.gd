@@ -6,7 +6,7 @@ extends RigidBody2D
 @onready var lvlcompleted = get_tree().current_scene.get_node("Level_Completed")
 @onready var lvlcompletedcontrol = get_tree().current_scene.get_node("Level_Completed/Control")
 @onready var winaudio = $WinAudio
-@onready var bgmusic = $BackgroundMusic
+var checkpointpos = Vector2.ZERO
 var mat = PhysicsMaterial.new()
 var frenzy = false
 var frenzycounter = 100
@@ -24,7 +24,6 @@ func _ready() -> void:
 	mat.bounce = 0.3
 	mat.friction = 0
 	physics_material_override = mat
-	bgmusic.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -56,12 +55,14 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("Putt"):
 		line.clear_points()
 		if frenzy:
-			apply_central_impulse(direction * 3)
+			apply_central_impulse(direction * 8)
 		elif can_hit:
 			totalputts += 1
 			apply_central_impulse(direction * 5)
 	if Input.is_action_just_pressed("SlamDown"):
 		linear_velocity.y += 300
+	if Input.is_action_just_released("restart"):
+		death()
 	if Input.is_action_pressed("Putt"):
 		if can_hit or frenzy:
 			line.default_color = Color(0.542, 1.0, 0.511, 1.0)
@@ -102,3 +103,12 @@ func flag_reached():
 	winaudio.play()
 	lvlcompleted.show()
 	lvlcompletedcontrol.flag_reached()
+func death():
+	set_deferred("freeze", true)
+	gamefunc_enabled = false
+	scale = Vector2.ONE
+	var tween = create_tween()
+	tween.tween_property(self, "position", checkpointpos, 2)\
+	.set_trans(Tween.TRANS_BOUNCE)\
+	.set_ease(Tween.EASE_OUT)
+	set_deferred("freeze", false)

@@ -2,7 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://d2o1xgi6k3r7i" path="res://Assets/Placeholder_.png" id="1_68fv8"]
 [ext_resource type="Script" uid="uid://dfest81t2asm3" path="res://Scripts/LevelCompleted.gd" id="1_f6yw7"]
-[ext_resource type="Shader" uid="uid://bwpb7vt5yciq0" path="res://Scripts/Scroll.gdshader" id="1_ubife"]
+[ext_resource type="Shader" uid="uid://bwpb7vt5yciq0" path="res://Scripts/Shaders/Scroll.gdshader" id="1_ubife"]
+[ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="4_4y4p0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f6yw7"]
 shader = ExtResource("1_ubife")
@@ -32,20 +33,24 @@ expand_mode = 1
 
 [node name="LevelCompleted" type="Label" parent="Control" unique_id=1348478756]
 layout_mode = 0
-offset_left = 10.0
+offset_left = 30.0
 offset_top = 10.0
-offset_right = 342.0
+offset_right = 362.0
 offset_bottom = 65.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4y4p0")
 theme_override_font_sizes/font_size = 40
 text = "Level Completed!"
 
 [node name="NextLevel" type="Button" parent="Control" unique_id=782284555]
 custom_minimum_size = Vector2(300, 30)
 layout_mode = 0
-offset_left = 17.0
-offset_top = 79.0
-offset_right = 317.0
-offset_bottom = 109.0
+offset_left = -324.0
+offset_top = 126.0
+offset_right = -24.0
+offset_bottom = 169.0
+theme_override_fonts/font = ExtResource("4_4y4p0")
 theme_override_font_sizes/font_size = 25
 text = "Next Level"
 

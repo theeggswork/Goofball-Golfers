@@ -10,40 +10,29 @@
 
 [node name="Player" parent="." unique_id=1666780814 instance=ExtResource("1_rf04y")]
 
-[node name="PlaceholderObject" parent="." unique_id=1328187938 instance=ExtResource("2_yc6sp")]
-texture_filter = 1
-position = Vector2(0, 386)
-scale = Vector2(16.898191, 0.6)
-
-[node name="PlaceholderObject6" parent="." unique_id=185290105 instance=ExtResource("2_yc6sp")]
-texture_filter = 1
-position = Vector2(0, -259.99994)
-scale = Vector2(30.279997, 0.6)
-
-[node name="PlaceholderObject2" parent="." unique_id=1260800413 instance=ExtResource("2_yc6sp")]
-texture_filter = 1
-position = Vector2(464, 342)
-rotation = -0.32119945
-scale = Vector2(7.169819, 0.6)
-
-[node name="PlaceholderObject3" parent="." unique_id=702903144 instance=ExtResource("2_yc6sp")]
-position = Vector2(579.00006, -39.000004)
-scale = Vector2(0.7005094, 17.480001)
-
-[node name="PlaceholderObject4" parent="." unique_id=1620657573 instance=ExtResource("2_yc6sp")]
-texture_filter = 1
-position = Vector2(-457, 342)
-rotation = 0.31415927
-scale = Vector2(7.169819, 0.6)
-
-[node name="PlaceholderObject5" parent="." unique_id=1464557458 instance=ExtResource("2_yc6sp")]
-position = Vector2(-569, -39)
-scale = Vector2(0.7005094, 17.480001)
-
 [node name="WinCondition" parent="." unique_id=1482428891 instance=ExtResource("3_4pc0y")]
-position = Vector2(269, 320)
+position = Vector2(420, 208)
 
 [node name="HUD" parent="." unique_id=2069383963 instance=ExtResource("4_wtpe1")]
+visible = false
 
 [node name="Level_Completed" parent="." unique_id=625890091 instance=ExtResource("5_h0lgg")]
 visible = false
+
+[node name="PlaceholderObject" parent="." unique_id=1328187938 instance=ExtResource("2_yc6sp")]
+position = Vector2(0, 316)
+scale = Vector2(30, 1)
+
+[node name="PlaceholderObject2" parent="." unique_id=1369218472 instance=ExtResource("2_yc6sp")]
+position = Vector2(-151, -211)
+scale = Vector2(22.48, 1)
+
+[node name="PlaceholderObject4" parent="." unique_id=1989061559 instance=ExtResource("2_yc6sp")]
+position = Vector2(754, 206.99994)
+rotation = -0.6021386
+scale = Vector2(10, 1)
+
+[node name="PlaceholderObject3" parent="." unique_id=1070730716 instance=ExtResource("2_yc6sp")]
+position = Vector2(-580, 50)
+rotation = 1.5707964
+scale = Vector2(13, 1)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://drv416k5abko7"]
 
 [ext_resource type="Script" uid="uid://bwuen3r1o12aj" path="res://Scripts/HUD.gd" id="1_msu7g"]
+[ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="2_10013"]
 
 [node name="HUD" type="CanvasLayer" unique_id=2069383963]
 
@@ -17,6 +18,7 @@ offset_left = 9.0
 offset_top = 4.0
 offset_right = 166.0
 offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("2_10013")
 theme_override_font_sizes/font_size = 30
 text = "Total Putts"
 
@@ -26,6 +28,7 @@ offset_left = 9.0
 offset_top = 49.0
 offset_right = 166.0
 offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("2_10013")
 theme_override_font_sizes/font_size = 30
 text = "Time Taken"
 
@@ -36,10 +39,31 @@ offset_left = 9.0
 offset_top = 100.0
 offset_right = 209.0
 offset_bottom = 127.0
+theme_override_fonts/font = ExtResource("2_10013")
 
 [node name="Demo" type="Label" parent="Control" unique_id=1885158358]
 layout_mode = 0
 offset_top = 625.0
 offset_right = 296.0
 offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("2_10013")
 text = "Demo Build 6626 -- Subject To Change."
+
+[node name="Tips" type="Label" parent="Control" unique_id=1709053970]
+layout_mode = 0
+offset_left = 629.0
+offset_top = 15.0
+offset_right = 1139.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("2_10013")
+text = "Z To Activate Frenzy Mode. R To Reset To Latest Checkpoint."
+
+[node name="Label" type="Label" parent="Control" unique_id=1004848956]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 109.0
+offset_right = 501.0
+offset_bottom = 148.0
+theme_override_fonts/font = ExtResource("2_10013")
+theme_override_font_sizes/font_size = 10
+text = "<- this the frenzy"

@@ -1,6 +1,7 @@
 extends Control
 @onready var player = get_tree().current_scene.get_node("Player")
 @onready var hud = get_tree().current_scene.get_node("HUD")
+@onready var nextlevel = $NextLevel
 var setup = Setup.new()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,6 +18,10 @@ func flag_reached():
 	position.y = -300
 	var tween = create_tween()
 	tween.tween_property(self, "position", Vector2(0, 0), 2)\
+	.set_trans(Tween.TRANS_BOUNCE)\
+	.set_ease(Tween.EASE_OUT)
+	tween = create_tween()
+	tween.tween_property(nextlevel, "position", Vector2(-1, 125.0), 2)\
 	.set_trans(Tween.TRANS_BOUNCE)\
 	.set_ease(Tween.EASE_OUT)
 
