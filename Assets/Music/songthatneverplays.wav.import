@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://nhgh03rylrb7"
-path="res://.godot/imported/songthatneverplays.wav-516ac107920ea71748756f1da7dc2a17.sample"
+path="res://.godot/imported/songthatneverplays.wav-5050c159229a41ba05d2210d1341677d.sample"
 
 [deps]
 
-source_file="res://Assets/songthatneverplays.wav"
-dest_files=["res://.godot/imported/songthatneverplays.wav-516ac107920ea71748756f1da7dc2a17.sample"]
+source_file="res://Assets/Music/songthatneverplays.wav"
+dest_files=["res://.godot/imported/songthatneverplays.wav-5050c159229a41ba05d2210d1341677d.sample"]
 
 [params]
 

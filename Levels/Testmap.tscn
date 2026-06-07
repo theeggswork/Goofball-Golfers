@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cefcleb22ylx6" path="res://Tscn/PlaceholderObject.tscn" id="2_yc6sp"]
 [ext_resource type="PackedScene" uid="uid://cxrbn0ge4ms6h" path="res://Tscn/WinCondition.tscn" id="3_4pc0y"]
 [ext_resource type="PackedScene" uid="uid://drv416k5abko7" path="res://Tscn/HUD.tscn" id="4_wtpe1"]
+[ext_resource type="PackedScene" uid="uid://dkh2kknuu37u" path="res://Tscn/Level_Completed.tscn" id="5_h0lgg"]
 
 [node name="Testmap" type="Node2D" unique_id=581708526]
 
@@ -43,3 +44,6 @@ scale = Vector2(0.7005094, 17.480001)
 position = Vector2(269, 320)
 
 [node name="HUD" parent="." unique_id=2069383963 instance=ExtResource("4_wtpe1")]
+
+[node name="Level_Completed" parent="." unique_id=625890091 instance=ExtResource("5_h0lgg")]
+visible = false

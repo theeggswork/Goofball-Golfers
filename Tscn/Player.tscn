@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ccgdie0mgw8wf" path="res://Scripts/GolfScript.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://d0eldqsqariep" path="res://Assets/Ball.png" id="1_xhfnw"]
-[ext_resource type="AudioStream" uid="uid://cub0lydn7fbnx" path="res://Assets/Tada.wav" id="3_kudba"]
-[ext_resource type="AudioStream" uid="uid://hu7chinq4c6r" path="res://Assets/golf.mp3" id="4_s726c"]
+[ext_resource type="AudioStream" uid="uid://cub0lydn7fbnx" path="res://Assets/Music/Tada.wav" id="3_kudba"]
+[ext_resource type="AudioStream" uid="uid://hu7chinq4c6r" path="res://Assets/Music/golf.mp3" id="4_s726c"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kpjcp"]
 

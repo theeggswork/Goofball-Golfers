@@ -1,7 +1,10 @@
 extends RigidBody2D
+# now for a lot of variable init which looks VERY VERY VERY confusing
 @onready var cam = $Camera2D
 @onready var line = get_tree().current_scene.get_node("Player/Line2D")
 @onready var wincond = get_tree().current_scene.get_node("WinCondition")
+@onready var lvlcompleted = get_tree().current_scene.get_node("Level_Completed")
+@onready var lvlcompletedcontrol = get_tree().current_scene.get_node("Level_Completed/Control")
 @onready var winaudio = $WinAudio
 @onready var bgmusic = $BackgroundMusic
 var mat = PhysicsMaterial.new()
@@ -16,6 +19,7 @@ var dirchange = 0
 var timetaken = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	lvlcompleted.hide()
 	add_to_group("Player")
 	mat.bounce = 0.3
 	mat.friction = 0
@@ -85,6 +89,7 @@ func draw_custom_line(start_pos: Vector2, end_pos: Vector2):
 	line.add_point(line.to_local(start_pos))
 	line.add_point(line.to_local(end_pos))
 func flag_reached():
+	cam.zoom = Vector2(1,1)
 	var tween = create_tween()
 	gamefunc_enabled = false
 	scale = Vector2.ONE
@@ -95,3 +100,5 @@ func flag_reached():
 	tween = create_tween()
 	tween.tween_property(self, "modulate:a", 0.0, 1.0)
 	winaudio.play()
+	lvlcompleted.show()
+	lvlcompletedcontrol.flag_reached()
