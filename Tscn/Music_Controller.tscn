@@ -9,3 +9,5 @@ script = ExtResource("1_v1ex1")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1597619805]
 stream = ExtResource("2_gxgfu")
 autoplay = true
+max_distance = 4096.0
+parameters/looping = true

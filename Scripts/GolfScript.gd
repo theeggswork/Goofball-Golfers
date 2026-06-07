@@ -9,7 +9,7 @@ extends RigidBody2D
 var checkpointpos = Vector2.ZERO
 var mat = PhysicsMaterial.new()
 var frenzy = false
-var frenzycounter = 100
+var frenzycounter = 60 # haha you have to EARN the frenzy mode
 var totalputts = 0
 var linecolor;
 var gamefunc_enabled = true
@@ -49,22 +49,30 @@ func _physics_process(delta: float) -> void:
 		if gamefunc_enabled:
 			scale = Vector2(1 + (stretch * 1.3), 1 - (stretch * 1.3))
 	# Putting System
-	var can_hit = linear_velocity.length() < 90
+	var can_hit = speed < 150
 	var mouse_pos = get_global_mouse_position()
 	var direction = mouse_pos - global_position
 	if Input.is_action_just_released("Putt"):
 		line.clear_points()
 		if frenzy:
-			apply_central_impulse(direction * 8)
+			apply_central_impulse(direction * 3)
 		elif can_hit:
 			totalputts += 1
-			apply_central_impulse(direction * 5)
+			if frenzycounter + 5 <= 100:
+				frenzycounter += 5
+			else:
+				frenzycounter += 100 - frenzycounter
+			apply_central_impulse(direction * 4)
 	if Input.is_action_just_pressed("SlamDown"):
 		linear_velocity.y += 300
+	if Input.is_action_pressed("d"):
+		linear_velocity.x += 15
+	if Input.is_action_pressed("a"):
+		linear_velocity.x -= 15
 	if Input.is_action_just_released("restart"):
 		death()
 	if Input.is_action_pressed("Putt"):
-		if can_hit or frenzy:
+		if (can_hit and (abs(direction.x) + abs(direction.y)) < 650) or frenzy:
 			line.default_color = Color(0.542, 1.0, 0.511, 1.0)
 		else:
 			line.default_color = Color(1.0, 0.451, 0.382, 1.0)
@@ -112,3 +120,4 @@ func death():
 	.set_trans(Tween.TRANS_BOUNCE)\
 	.set_ease(Tween.EASE_OUT)
 	set_deferred("freeze", false)
+	gamefunc_enabled = true

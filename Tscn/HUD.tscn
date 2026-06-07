@@ -47,7 +47,7 @@ offset_top = 625.0
 offset_right = 296.0
 offset_bottom = 648.0
 theme_override_fonts/font = ExtResource("2_10013")
-text = "Demo Build 6626 -- Subject To Change."
+text = "Demo Build 6726 -- Subject To Change."
 
 [node name="Tips" type="Label" parent="Control" unique_id=1709053970]
 layout_mode = 0
@@ -58,7 +58,16 @@ offset_bottom = 38.0
 theme_override_fonts/font = ExtResource("2_10013")
 text = "Z To Activate Frenzy Mode. R To Reset To Latest Checkpoint."
 
-[node name="Label" type="Label" parent="Control" unique_id=1004848956]
+[node name="Tips2" type="Label" parent="Control" unique_id=364349566]
+layout_mode = 0
+offset_left = 751.0
+offset_top = 36.0
+offset_right = 1261.0
+offset_bottom = 59.0
+theme_override_fonts/font = ExtResource("2_10013")
+text = "WASD to not so slightly change its movement"
+
+[node name="Reminder" type="Label" parent="Control" unique_id=1004848956]
 layout_mode = 0
 offset_left = 220.0
 offset_top = 109.0
