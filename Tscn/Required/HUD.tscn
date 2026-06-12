@@ -42,18 +42,18 @@ text = "Demo Build 6726 -- Subject To Change."
 
 [node name="Tips" type="Label" parent="Control" unique_id=1709053970]
 layout_mode = 0
-offset_left = 629.0
-offset_top = 15.0
-offset_right = 1139.0
-offset_bottom = 38.0
+offset_left = 868.0
+offset_top = 13.0
+offset_right = 1378.0
+offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("2_10013")
-text = "Z To Activate Frenzy Mode. R To Reset To Latest Checkpoint."
+text = "R To Reset To Latest Checkpoint."
 
 [node name="Tips2" type="Label" parent="Control" unique_id=364349566]
 layout_mode = 0
-offset_left = 751.0
+offset_left = 893.0
 offset_top = 36.0
-offset_right = 1261.0
+offset_right = 1403.0
 offset_bottom = 59.0
 theme_override_fonts/font = ExtResource("2_10013")
-text = "WASD to not so slightly change its movement"
+text = "A and D to change something."
