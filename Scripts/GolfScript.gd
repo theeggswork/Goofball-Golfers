@@ -53,7 +53,12 @@ func _physics_process(delta: float) -> void:
 		linear_velocity.x += 15
 	if Input.is_action_pressed("a"):
 		linear_velocity.x -= 15
-	if Input.is_action_just_released("restart"):
+	if Input.is_action_just_released("restart") and gamefunc_enabled and not Input.is_key_pressed(KEY_SHIFT):
+		death()
+	if Input.is_action_just_released("hardrestart") and gamefunc_enabled:
+		checkpointpos = Vector2.ZERO
+		timetaken = 0
+		totalputts = 0
 		death()
 	if Input.is_action_pressed("Putt"):
 		if can_hit:
@@ -103,5 +108,6 @@ func death():
 	tween.tween_property(self, "position", checkpointpos, 2)\
 	.set_trans(Tween.TRANS_BOUNCE)\
 	.set_ease(Tween.EASE_OUT)
+	await tween.finished 
 	set_deferred("freeze", false)
 	gamefunc_enabled = true

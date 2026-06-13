@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bnpcw7fvoq24x" path="res://Assets/circle.png" id="6_s3eeo"]
 [ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="7_sekj7"]
 [ext_resource type="PackedScene" uid="uid://fnso5lndj3of" path="res://Tscn/Objects/Checkpoint.tscn" id="8_vcbfa"]
+[ext_resource type="PackedScene" uid="uid://qc5kk8xywph1" path="res://Tscn/Required/Background3D.tscn" id="9_6fv1c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sekj7"]
 
@@ -216,3 +217,5 @@ position = Vector2(2158, 29)
 
 [node name="Checkpoint2" parent="." unique_id=1912740212 instance=ExtResource("8_vcbfa")]
 position = Vector2(4128, -4628)
+
+[node name="Background3D" parent="." unique_id=682743684 instance=ExtResource("9_6fv1c")]

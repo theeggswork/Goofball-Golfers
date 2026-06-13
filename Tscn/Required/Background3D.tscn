@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://qc5kk8xywph1"]
+
+[ext_resource type="Script" uid="uid://8csuja2mwwgj" path="res://Scripts/Background3D.gd" id="1_nl30e"]
+[ext_resource type="Texture2D" uid="uid://d2o1xgi6k3r7i" path="res://Assets/Placeholder_.png" id="2_2vjso"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nl30e"]
+sky_top_color = Color(0.76920116, 0.25033644, 0.43689987, 1)
+sky_horizon_color = Color(0.2509804, 0.18431373, 0.3882353, 1)
+ground_bottom_color = Color(0.25119656, 0.1830549, 0.3882733, 1)
+ground_horizon_color = Color(0.2509804, 0.18431373, 0.3882353, 1)
+
+[sub_resource type="Sky" id="Sky_dxeay"]
+sky_material = SubResource("ProceduralSkyMaterial_nl30e")
+
+[sub_resource type="Environment" id="Environment_2vjso"]
+background_mode = 2
+sky = SubResource("Sky_dxeay")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nopf0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2pim1"]
+albedo_texture = ExtResource("2_2vjso")
+uv1_scale = Vector3(50, 50, 50)
+
+[node name="Background3D" type="CanvasLayer" unique_id=1979860615]
+layer = -1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=49054747]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=849241239]
+handle_input_locally = false
+size = Vector2i(1155, 650)
+render_target_update_mode = 4
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport" unique_id=1503296220]
+environment = SubResource("Environment_2vjso")
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=674941823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6875061, 1.5840771)
+script = ExtResource("1_nl30e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport" unique_id=1075419372]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, -2.5906582)
+mesh = SubResource("PlaneMesh_nopf0")
+surface_material_override/0 = SubResource("StandardMaterial3D_2pim1")
