@@ -44,6 +44,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6875061, 1.5840771)
 script = ExtResource("1_nl30e")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport" unique_id=1075419372]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, -2.5906582)
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, -1, 0)
 mesh = SubResource("PlaneMesh_nopf0")
 surface_material_override/0 = SubResource("StandardMaterial3D_2pim1")

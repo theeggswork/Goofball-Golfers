@@ -1,7 +1,7 @@
 extends RefCounted
 class_name Setup
 var LevelList = [
-	"res://Levels/Testmap.tscn"
+	"res://Levels/TestMap.tscn"
 ]
 var LevelPointer = 0
 

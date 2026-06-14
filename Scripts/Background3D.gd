@@ -8,4 +8,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	rotation_degrees.y += player.linear_velocity.x / 1000
+	position = Vector3(player.position.x / 1000,player.position.y / -1000, 0)
