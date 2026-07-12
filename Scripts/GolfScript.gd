@@ -1,11 +1,10 @@
 extends RigidBody2D
-# now for a lot of variable init which looks VERY VERY VERY confusing
+# Very Very Confusing
 @onready var cam = $Camera2D
 @onready var line = get_tree().current_scene.get_node("Player/Line2D")
 @onready var wincond = get_tree().current_scene.get_node("WinCondition")
 @onready var lvlcompleted = get_tree().current_scene.get_node("Level_Completed")
 @onready var lvlcompletedcontrol = get_tree().current_scene.get_node("Level_Completed/Control")
-@onready var winaudio = $WinAudio
 var checkpointpos = Vector2.ZERO
 var mat = PhysicsMaterial.new()
 var totalputts = 0
@@ -86,6 +85,7 @@ func draw_custom_line(start_pos: Vector2, end_pos: Vector2):
 	line.clear_points()
 	line.add_point(line.to_local(start_pos))
 	line.add_point(line.to_local(end_pos))
+
 func flag_reached():
 	cam.zoom = Vector2(1,1)
 	var tween = create_tween()
@@ -97,9 +97,9 @@ func flag_reached():
 	.set_ease(Tween.EASE_OUT)
 	tween = create_tween()
 	tween.tween_property(self, "modulate:a", 0.0, 1.0)
-	winaudio.play()
 	lvlcompleted.show()
 	lvlcompletedcontrol.flag_reached()
+
 func death():
 	set_deferred("freeze", true)
 	gamefunc_enabled = false

@@ -27,8 +27,4 @@ func flag_reached():
 
 
 func _on_next_level_button_up() -> void:
-	if setup.LevelPointer + 1 < setup.LevelList.size():
-		setup.LevelPointer += 1
-	else:
-		setup.LevelPointer = 0
-	get_tree().change_scene_to_file(setup.LevelList[setup.LevelPointer])
+	print("WIP")

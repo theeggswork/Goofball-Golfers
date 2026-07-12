@@ -13,7 +13,7 @@ config_version=5
 config/name="Goofball Golfing"
 config/description="Golf Game."
 run/main_scene="uid://b2pmlxmfkf4ub"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://rl0gmgekd0lu"
 
 [autoload]
