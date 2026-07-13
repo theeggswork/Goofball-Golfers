@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qc5kk8xywph1"]
 
-[ext_resource type="Script" uid="uid://8csuja2mwwgj" path="res://Scripts/Background3D.gd" id="1_nl30e"]
+[ext_resource type="Script" uid="uid://8csuja2mwwgj" path="res://Scripts/Objects/Background3D.gd" id="1_nl30e"]
 [ext_resource type="Texture2D" uid="uid://d2o1xgi6k3r7i" path="res://Assets/Placeholder_.png" id="2_2vjso"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nl30e"]

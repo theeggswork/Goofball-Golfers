@@ -1,11 +1,34 @@
 [gd_scene format=3 uid="uid://d0hgff003xq4r"]
 
 [ext_resource type="Script" uid="uid://ccgdie0mgw8wf" path="res://Scripts/GolfScript.gd" id="1_kpjcp"]
-[ext_resource type="Texture2D" uid="uid://d0eldqsqariep" path="res://Assets/Ball.png" id="1_xhfnw"]
+[ext_resource type="Texture2D" uid="uid://cd7m57gah04p5" path="res://Assets/Ball1.svg" id="2_64php"]
+[ext_resource type="Texture2D" uid="uid://dubt852bhqjol" path="res://Assets/Ball2.svg" id="3_wd5xa"]
+[ext_resource type="Texture2D" uid="uid://dls1h5sle44l2" path="res://Assets/Ball3.svg" id="4_gdl3b"]
+[ext_resource type="Texture2D" uid="uid://bnj3f3glnj10f" path="res://Assets/Ball4.svg" id="5_t6iub"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kpjcp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kpjcp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7n1bx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_64php")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wd5xa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gdl3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t6iub")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Player" type="RigidBody2D" unique_id=1666780814]
 physics_material_override = SubResource("PhysicsMaterial_kpjcp")
@@ -15,14 +38,14 @@ script = ExtResource("1_kpjcp")
 scale = Vector2(6, 6)
 shape = SubResource("CircleShape2D_kpjcp")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=930047070]
-texture_filter = 1
-scale = Vector2(2.3, 2.3)
-texture = ExtResource("1_xhfnw")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1841514432]
 limit_smoothed = true
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1737696216]
 show_behind_parent = true
 width = 20.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1638136874]
+texture_filter = 1
+scale = Vector2(5.2, 5.2)
+sprite_frames = SubResource("SpriteFrames_7n1bx")

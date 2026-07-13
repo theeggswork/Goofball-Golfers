@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dkh2kknuu37u"]
 
 [ext_resource type="Texture2D" uid="uid://d2o1xgi6k3r7i" path="res://Assets/Placeholder_.png" id="1_68fv8"]
-[ext_resource type="Script" uid="uid://dfest81t2asm3" path="res://Scripts/LevelCompleted.gd" id="1_f6yw7"]
+[ext_resource type="Script" uid="uid://dfest81t2asm3" path="res://Scripts/Objects/LevelCompleted.gd" id="1_f6yw7"]
 [ext_resource type="Shader" uid="uid://bwpb7vt5yciq0" path="res://Scripts/Shaders/Scroll.gdshader" id="1_ubife"]
 [ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="4_4y4p0"]
 

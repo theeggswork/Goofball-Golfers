@@ -1,6 +1,7 @@
 extends RigidBody2D
 # Very Very Confusing
 @onready var cam = $Camera2D
+@onready var animated_sprite = $AnimatedSprite2D
 @onready var line = get_tree().current_scene.get_node("Player/Line2D")
 @onready var wincond = get_tree().current_scene.get_node("WinCondition")
 @onready var lvlcompleted = get_tree().current_scene.get_node("Level_Completed")
@@ -16,6 +17,8 @@ var dirchange = 0
 var timetaken = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	scale = Vector2.ONE
+	animated_sprite.play("default")
 	lvlcompleted.hide()
 	add_to_group("Player")
 	mat.bounce = 0.3
