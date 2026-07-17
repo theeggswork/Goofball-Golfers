@@ -11,3 +11,5 @@ stream = ExtResource("2_v1ex1")
 autoplay = true
 max_distance = 4096.0
 parameters/looping = true
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

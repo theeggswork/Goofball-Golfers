@@ -3,16 +3,22 @@
 [ext_resource type="PackedScene" uid="uid://d0hgff003xq4r" path="res://Tscn/Required/Player.tscn" id="1_o2mc1"]
 [ext_resource type="PackedScene" uid="uid://cxrbn0ge4ms6h" path="res://Tscn/Required/WinCondition.tscn" id="2_fb5s7"]
 [ext_resource type="PackedScene" uid="uid://drv416k5abko7" path="res://Tscn/Required/HUD.tscn" id="3_ax7xh"]
-[ext_resource type="PackedScene" uid="uid://dkh2kknuu37u" path="res://Tscn/Required/Level_Completed.tscn" id="4_b5mwe"]
+[ext_resource type="PackedScene" uid="uid://dkh2kknuu37u" path="res://Tscn/Required/LevelCompleted.tscn" id="4_b5mwe"]
 [ext_resource type="PackedScene" uid="uid://cefcleb22ylx6" path="res://Tscn/Objects/PlaceholderObject.tscn" id="5_fwcfx"]
 [ext_resource type="Texture2D" uid="uid://bnpcw7fvoq24x" path="res://Assets/CirclePlaceholder.png" id="6_sxd26"]
 [ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="7_fe1su"]
 [ext_resource type="PackedScene" uid="uid://fnso5lndj3of" path="res://Tscn/Objects/Checkpoint.tscn" id="8_qhu7c"]
 [ext_resource type="PackedScene" uid="uid://qc5kk8xywph1" path="res://Tscn/Required/Background3D.tscn" id="9_e1u0q"]
+[ext_resource type="PackedScene" uid="uid://5qhfy2espvp1" path="res://Tscn/Objects/TennisLauncher.tscn" id="10_fb5s7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sekj7"]
 
 [node name="Testmap" type="Node2D" unique_id=581708526]
+
+[node name="TennisLauncher" parent="." unique_id=1068618976 instance=ExtResource("10_fb5s7")]
+position = Vector2(-433, 298)
+
+[node name="Background3D" parent="." unique_id=682743684 instance=ExtResource("9_e1u0q")]
 
 [node name="Player" parent="." unique_id=1666780814 instance=ExtResource("1_o2mc1")]
 
@@ -23,6 +29,34 @@ position = Vector2(7988, -4661)
 
 [node name="Level_Completed" parent="." unique_id=625890091 instance=ExtResource("4_b5mwe")]
 visible = false
+
+[node name="Checkpoint" parent="." unique_id=1113387631 instance=ExtResource("8_qhu7c")]
+position = Vector2(2158, 29)
+
+[node name="Checkpoint2" parent="." unique_id=1912740212 instance=ExtResource("8_qhu7c")]
+position = Vector2(4128, -4628)
+
+[node name="Label" type="Label" parent="." unique_id=173102857]
+offset_left = 7031.0
+offset_top = -4792.0
+offset_right = 8300.0
+offset_bottom = -4750.0
+theme_override_fonts/font = ExtResource("7_fe1su")
+theme_override_font_sizes/font_size = 30
+text = "END OF DEMO. Go into the placeholder to finish the level, or listen to the music."
+
+[node name="Label2" type="Label" parent="." unique_id=380177038]
+offset_left = 4646.0
+offset_top = -4690.0
+offset_right = 5261.0
+offset_bottom = -4648.0
+theme_override_fonts/font = ExtResource("7_fe1su")
+theme_override_font_sizes/font_size = 30
+text = "big leap."
+
+[node name="Copy2" parent="." unique_id=1235159681 instance=ExtResource("5_fwcfx")]
+position = Vector2(0, 402)
+scale = Vector2(32.16, 1.8)
 
 [node name="Copy3" parent="." unique_id=1053102703 instance=ExtResource("5_fwcfx")]
 position = Vector2(1146.0001, 243.00005)
@@ -43,10 +77,6 @@ scale = Vector2(26.319998, 0.5999999)
 position = Vector2(1117, -412.99988)
 rotation = 0.2617994
 scale = Vector2(26.319998, 0.5999999)
-
-[node name="Copy2" parent="." unique_id=1235159681 instance=ExtResource("5_fwcfx")]
-position = Vector2(0, 402)
-scale = Vector2(32.16, 1.8)
 
 [node name="Copy8" parent="." unique_id=79249858 instance=ExtResource("5_fwcfx")]
 position = Vector2(-15.000002, -528)
@@ -105,6 +135,10 @@ scale = Vector2(32.16, 18.119997)
 [node name="Copy6" parent="." unique_id=1483778848 instance=ExtResource("5_fwcfx")]
 position = Vector2(3449.0002, -525)
 scale = Vector2(24.6, 18.119997)
+
+[node name="Copy21" parent="." unique_id=1784560385 instance=ExtResource("5_fwcfx")]
+position = Vector2(7516, -4130)
+scale = Vector2(32.16, 19.040003)
 
 [node name="circl" type="StaticBody2D" parent="." unique_id=1737112578]
 texture_filter = 1
@@ -178,10 +212,6 @@ shape = SubResource("CircleShape2D_sekj7")
 [node name="Sprite2D" type="Sprite2D" parent="circl6" unique_id=989454032]
 texture = ExtResource("6_sxd26")
 
-[node name="Copy21" parent="." unique_id=1784560385 instance=ExtResource("5_fwcfx")]
-position = Vector2(7516, -4130)
-scale = Vector2(32.16, 19.040003)
-
 [node name="circl7" type="StaticBody2D" parent="." unique_id=31889047]
 texture_filter = 1
 position = Vector2(6891, -4154)
@@ -193,29 +223,3 @@ shape = SubResource("CircleShape2D_sekj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="circl7" unique_id=998309443]
 texture = ExtResource("6_sxd26")
-
-[node name="Label" type="Label" parent="." unique_id=173102857]
-offset_left = 7031.0
-offset_top = -4792.0
-offset_right = 8181.0
-offset_bottom = -4750.0
-theme_override_fonts/font = ExtResource("7_fe1su")
-theme_override_font_sizes/font_size = 30
-text = "END OF DEMO. Go into the placeholder to finish the level, or listen to the music."
-
-[node name="Label2" type="Label" parent="." unique_id=380177038]
-offset_left = 4646.0
-offset_top = -4690.0
-offset_right = 5261.0
-offset_bottom = -4648.0
-theme_override_fonts/font = ExtResource("7_fe1su")
-theme_override_font_sizes/font_size = 30
-text = "big leap."
-
-[node name="Checkpoint" parent="." unique_id=1113387631 instance=ExtResource("8_qhu7c")]
-position = Vector2(2158, 29)
-
-[node name="Checkpoint2" parent="." unique_id=1912740212 instance=ExtResource("8_qhu7c")]
-position = Vector2(4128, -4628)
-
-[node name="Background3D" parent="." unique_id=682743684 instance=ExtResource("9_e1u0q")]

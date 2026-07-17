@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://5qhfy2espvp1"]
+
+[ext_resource type="Script" uid="uid://crfw3d18m2thd" path="res://Scripts/tennis_launcher.gd" id="1_og3w6"]
+[ext_resource type="PackedScene" uid="uid://bhh0wplwip5um" path="res://Tscn/Objects/TennisBall.tscn" id="2_ptpas"]
+[ext_resource type="Texture2D" uid="uid://df037pg6qhrls" path="res://Assets/TL_FAIL1.svg" id="3_imhv2"]
+[ext_resource type="Texture2D" uid="uid://c0hyndqcghuwe" path="res://Assets/TL_DEFAULT.svg" id="3_ptpas"]
+[ext_resource type="Texture2D" uid="uid://bt77afra4jo7g" path="res://Assets/TL_FAIL2.svg" id="4_hoinr"]
+[ext_resource type="Texture2D" uid="uid://c7exrjv6abkgd" path="res://Assets/TL_FAIL3.svg" id="5_atd5r"]
+[ext_resource type="Texture2D" uid="uid://cm771ibs6b0ik" path="res://Assets/TL_FAIL4.svg" id="6_24h82"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ptpas"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_imhv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hoinr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_atd5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_24h82")
+}],
+"loop": 1,
+"name": &"broken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ptpas")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TennisLauncher" type="Node2D" unique_id=563301963]
+scale = Vector2(10, 10)
+script = ExtResource("1_og3w6")
+broken = true
+scene_to_spawn = ExtResource("2_ptpas")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87521037]
+texture_filter = 1
+position = Vector2(0, 0.90000004)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_ptpas")
+animation = &"broken"
+frame_progress = 0.7255608
