@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://dkh2kknuu37u"]
 
-[ext_resource type="Texture2D" uid="uid://d2o1xgi6k3r7i" path="res://Assets/Placeholder_.png" id="1_68fv8"]
 [ext_resource type="Script" uid="uid://dfest81t2asm3" path="res://Scripts/Objects/LevelCompleted.gd" id="1_f6yw7"]
 [ext_resource type="Shader" uid="uid://bwpb7vt5yciq0" path="res://Scripts/Shaders/Scroll.gdshader" id="1_ubife"]
+[ext_resource type="Texture2D" uid="uid://gwngg6pc80fu" path="res://Assets/Placeholder_.png" id="3_g1r50"]
 [ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="4_4y4p0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f6yw7"]
 shader = ExtResource("1_ubife")
+shader_parameter/speed_x = 1.0
+shader_parameter/speed_y = 1.0
 
 [node name="Level_Completed" type="CanvasLayer" unique_id=625890091]
 
@@ -28,7 +30,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(29, 16.2)
-texture = ExtResource("1_68fv8")
+texture = ExtResource("3_g1r50")
 expand_mode = 1
 
 [node name="LevelCompleted" type="Label" parent="Control" unique_id=1348478756]

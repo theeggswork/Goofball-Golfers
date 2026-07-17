@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxrbn0ge4ms6h"]
 
 [ext_resource type="Script" uid="uid://dps3a5qqby64i" path="res://Scripts/Objects/WinCondition.gd" id="1_64yex"]
-[ext_resource type="Texture2D" uid="uid://d2o1xgi6k3r7i" path="res://Assets/Placeholder_.png" id="1_blj53"]
+[ext_resource type="Texture2D" uid="uid://gwngg6pc80fu" path="res://Assets/Placeholder_.png" id="2_5475g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64yex"]
 
@@ -13,6 +13,6 @@ scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_64yex")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1295867971]
-texture = ExtResource("1_blj53")
+texture = ExtResource("2_5475g")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

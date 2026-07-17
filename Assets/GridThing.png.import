@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gwngg6pc80fu"
-path.s3tc="res://.godot/imported/Placeholder_.png-ba02b22643424518453938876bbc96ad.s3tc.ctex"
-path.etc2="res://.godot/imported/Placeholder_.png-ba02b22643424518453938876bbc96ad.etc2.ctex"
+uid="uid://brt1pwo85iyqs"
+path.s3tc="res://.godot/imported/GridThing.png-e16b19ec643828792576cd87b476b841.s3tc.ctex"
+path.etc2="res://.godot/imported/GridThing.png-e16b19ec643828792576cd87b476b841.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Placeholder_.png"
-dest_files=["res://.godot/imported/Placeholder_.png-ba02b22643424518453938876bbc96ad.s3tc.ctex", "res://.godot/imported/Placeholder_.png-ba02b22643424518453938876bbc96ad.etc2.ctex"]
+source_file="res://Assets/GridThing.png"
+dest_files=["res://.godot/imported/GridThing.png-e16b19ec643828792576cd87b476b841.s3tc.ctex", "res://.godot/imported/GridThing.png-e16b19ec643828792576cd87b476b841.etc2.ctex"]
 
 [params]
 

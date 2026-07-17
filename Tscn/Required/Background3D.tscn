@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qc5kk8xywph1"]
 
 [ext_resource type="Script" uid="uid://8csuja2mwwgj" path="res://Scripts/Objects/Background3D.gd" id="1_nl30e"]
-[ext_resource type="Texture2D" uid="uid://d2o1xgi6k3r7i" path="res://Assets/Placeholder_.png" id="2_2vjso"]
+[ext_resource type="Texture2D" uid="uid://brt1pwo85iyqs" path="res://Assets/GridThing.png" id="2_nl30e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nl30e"]
 sky_top_color = Color(0.76920116, 0.25033644, 0.43689987, 1)
@@ -21,7 +21,8 @@ ambient_light_color = Color(1, 1, 1, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_nopf0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2pim1"]
-albedo_texture = ExtResource("2_2vjso")
+albedo_color = Color(1, 0.77079207, 0.8891889, 1)
+albedo_texture = ExtResource("2_nl30e")
 uv1_scale = Vector3(50, 50, 50)
 
 [node name="Background3D" type="CanvasLayer" unique_id=1979860615]

@@ -1,3 +1,3 @@
 # Goofball Golfers
 
-ts the most PEAKEST golf game bro trust. its a golf game!1111
+A Open-Source Golf Game!!!!! i like golf

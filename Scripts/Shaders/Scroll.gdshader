@@ -1,8 +1,9 @@
 shader_type canvas_item;
-
+uniform float speed_x;
+uniform float speed_y;
 void vertex() {
-	UV.x += TIME / 10.0;
-	UV.y += TIME / 10.0;
+	UV.x += TIME * speed_x / 10.0;
+	UV.y += TIME * speed_y / 10.0;
 }
 
 void fragment() {
