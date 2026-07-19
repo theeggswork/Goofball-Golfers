@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ddswme5jlsi2g"]
 
 [ext_resource type="Script" uid="uid://b3b8u006mwe45" path="res://Scripts/MainMenu.gd" id="1_jqiue"]
-[ext_resource type="Texture2D" uid="uid://g2uolv60x0jf" path="res://Assets/Goofball.svg" id="1_pbnla"]
+[ext_resource type="Texture2D" uid="uid://g2uolv60x0jf" path="res://Assets/GB_LOGO.svg" id="1_pbnla"]
 [ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="2_4y4hs"]
 
 [node name="MainMenu" type="Control" unique_id=793153134]
@@ -14,7 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_jqiue")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1949302716]
-position = Vector2(139, 136)
+position = Vector2(140, 135)
 texture = ExtResource("1_pbnla")
 
 [node name="PlayButton" type="Button" parent="." unique_id=639382744]

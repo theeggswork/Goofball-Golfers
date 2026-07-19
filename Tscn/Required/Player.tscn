@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d0hgff003xq4r"]
 
 [ext_resource type="Script" uid="uid://ccgdie0mgw8wf" path="res://Scripts/GolfScript.gd" id="1_kpjcp"]
-[ext_resource type="Texture2D" uid="uid://cd7m57gah04p5" path="res://Assets/Ball1.svg" id="2_64php"]
-[ext_resource type="Texture2D" uid="uid://dubt852bhqjol" path="res://Assets/Ball2.svg" id="3_wd5xa"]
-[ext_resource type="Texture2D" uid="uid://dls1h5sle44l2" path="res://Assets/Ball3.svg" id="4_gdl3b"]
-[ext_resource type="Texture2D" uid="uid://bnj3f3glnj10f" path="res://Assets/Ball4.svg" id="5_t6iub"]
+[ext_resource type="Texture2D" uid="uid://cd7m57gah04p5" path="res://Assets/GB1.svg" id="2_64php"]
+[ext_resource type="Texture2D" uid="uid://dubt852bhqjol" path="res://Assets/GB2.svg" id="3_wd5xa"]
+[ext_resource type="Texture2D" uid="uid://dls1h5sle44l2" path="res://Assets/GB3.svg" id="4_gdl3b"]
+[ext_resource type="Texture2D" uid="uid://bnj3f3glnj10f" path="res://Assets/GB4.svg" id="5_t6iub"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kpjcp"]
 

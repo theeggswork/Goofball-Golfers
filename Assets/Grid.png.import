@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brt1pwo85iyqs"
-path.s3tc="res://.godot/imported/GridThing.png-e16b19ec643828792576cd87b476b841.s3tc.ctex"
-path.etc2="res://.godot/imported/GridThing.png-e16b19ec643828792576cd87b476b841.etc2.ctex"
+path.s3tc="res://.godot/imported/Grid.png-7cb94410da10419a5f895fdff80711bb.s3tc.ctex"
+path.etc2="res://.godot/imported/Grid.png-7cb94410da10419a5f895fdff80711bb.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/GridThing.png"
-dest_files=["res://.godot/imported/GridThing.png-e16b19ec643828792576cd87b476b841.s3tc.ctex", "res://.godot/imported/GridThing.png-e16b19ec643828792576cd87b476b841.etc2.ctex"]
+source_file="res://Assets/Grid.png"
+dest_files=["res://.godot/imported/Grid.png-7cb94410da10419a5f895fdff80711bb.s3tc.ctex", "res://.godot/imported/Grid.png-7cb94410da10419a5f895fdff80711bb.etc2.ctex"]
 
 [params]
 

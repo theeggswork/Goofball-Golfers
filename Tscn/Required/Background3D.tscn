@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qc5kk8xywph1"]
 
 [ext_resource type="Script" uid="uid://8csuja2mwwgj" path="res://Scripts/Objects/Background3D.gd" id="1_nl30e"]
-[ext_resource type="Texture2D" uid="uid://brt1pwo85iyqs" path="res://Assets/GridThing.png" id="2_nl30e"]
+[ext_resource type="Texture2D" uid="uid://brt1pwo85iyqs" path="res://Assets/Grid.png" id="2_nl30e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nl30e"]
 sky_top_color = Color(0.76920116, 0.25033644, 0.43689987, 1)

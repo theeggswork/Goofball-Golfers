@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g2uolv60x0jf"
-path="res://.godot/imported/Goofball.svg-cebbcca967f8e1cc18f52bcaeb5e34fe.ctex"
+uid="uid://dls1h5sle44l2"
+path="res://.godot/imported/GB3.svg-b3e2623a68b4b162202d344f3598db38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Goofball.svg"
-dest_files=["res://.godot/imported/Goofball.svg-cebbcca967f8e1cc18f52bcaeb5e34fe.ctex"]
+source_file="res://Assets/GB3.svg"
+dest_files=["res://.godot/imported/GB3.svg-b3e2623a68b4b162202d344f3598db38.ctex"]
 
 [params]
 

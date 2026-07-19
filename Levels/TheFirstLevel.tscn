@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cxrbn0ge4ms6h" path="res://Tscn/Required/WinCondition.tscn" id="5_t8wr6"]
 [ext_resource type="PackedScene" uid="uid://cefcleb22ylx6" path="res://Tscn/Objects/PlaceholderObject.tscn" id="6_4dkeg"]
 
-[node name="1-1" type="Node2D" unique_id=1937658373]
+[node name="TheFirstLevel" type="Node2D" unique_id=1937658373]
 
 [node name="Background3D" parent="." unique_id=1979860615 instance=ExtResource("1_qcbjh")]
 
