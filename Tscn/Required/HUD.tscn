@@ -38,7 +38,7 @@ offset_top = 625.0
 offset_right = 296.0
 offset_bottom = 648.0
 theme_override_fonts/font = ExtResource("2_10013")
-text = "Demo Build 6726 -- Subject To Change."
+text = "Demo Build 71726 -- Subject To Change."
 
 [node name="Tips" type="Label" parent="Control" unique_id=1709053970]
 layout_mode = 0
@@ -56,4 +56,21 @@ offset_top = 36.0
 offset_right = 1403.0
 offset_bottom = 59.0
 theme_override_fonts/font = ExtResource("2_10013")
-text = "A and D to change something."
+text = "A and D to move the smooths."
+
+[node name="DEBUGSPEED" type="Label" parent="Control" unique_id=777365534]
+layout_mode = 0
+offset_top = 127.0
+offset_right = 99.0
+offset_bottom = 150.0
+text = "debug speed"
+
+[node name="Score" type="Label" parent="Control" unique_id=65865860]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 94.0
+offset_right = 60.0
+offset_bottom = 117.0
+theme_override_fonts/font = ExtResource("2_10013")
+theme_override_font_sizes/font_size = 30
+text = "Score"

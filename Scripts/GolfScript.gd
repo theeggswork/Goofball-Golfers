@@ -4,8 +4,8 @@ extends RigidBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var line = get_tree().current_scene.get_node("Player/Line2D")
 @onready var wincond = get_tree().current_scene.get_node("WinCondition")
-@onready var lvlcompleted = get_tree().current_scene.get_node("Level_Completed")
-@onready var lvlcompletedcontrol = get_tree().current_scene.get_node("Level_Completed/Control")
+@onready var lvlcompleted = get_tree().current_scene.get_node("LevelCompleted")
+@onready var lvlcompletedcontrol = get_tree().current_scene.get_node("LevelCompleted/Control")
 var checkpointpos = Vector2.ZERO
 var mat = PhysicsMaterial.new()
 var totalputts = 0
@@ -15,6 +15,7 @@ var stretch;
 var speed = 0
 var dirchange = 0
 var timetaken = 0
+var SCORE = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	scale = Vector2.ONE
@@ -58,10 +59,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("restart") and gamefunc_enabled and not Input.is_key_pressed(KEY_SHIFT):
 		death()
 	if Input.is_action_just_released("hardrestart") and gamefunc_enabled:
-		checkpointpos = Vector2.ZERO
-		timetaken = 0
-		totalputts = 0
+		checkpointpos = Vector2(0,0)
+		await death()
 		death()
+		get_tree().reload_current_scene()
 	if Input.is_action_pressed("Putt"):
 		if can_hit:
 			line.default_color = Color(0.542, 1.0, 0.511, 1.0)
@@ -113,4 +114,5 @@ func death():
 	.set_ease(Tween.EASE_OUT)
 	await tween.finished 
 	set_deferred("freeze", false)
+	linear_velocity = Vector2(0,0)
 	gamefunc_enabled = true

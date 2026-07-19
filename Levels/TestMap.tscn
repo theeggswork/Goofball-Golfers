@@ -1,146 +1,160 @@
 [gd_scene format=3 uid="uid://b2pmlxmfkf4ub"]
 
-[ext_resource type="PackedScene" uid="uid://d0hgff003xq4r" path="res://Tscn/Required/Player.tscn" id="1_o2mc1"]
-[ext_resource type="PackedScene" uid="uid://cxrbn0ge4ms6h" path="res://Tscn/Required/WinCondition.tscn" id="2_fb5s7"]
-[ext_resource type="PackedScene" uid="uid://drv416k5abko7" path="res://Tscn/Required/HUD.tscn" id="3_ax7xh"]
-[ext_resource type="PackedScene" uid="uid://dkh2kknuu37u" path="res://Tscn/Required/LevelCompleted.tscn" id="4_b5mwe"]
-[ext_resource type="PackedScene" uid="uid://cefcleb22ylx6" path="res://Tscn/Objects/PlaceholderObject.tscn" id="5_fwcfx"]
-[ext_resource type="Texture2D" uid="uid://bnpcw7fvoq24x" path="res://Assets/CirclePlaceholder.png" id="6_sxd26"]
-[ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="7_fe1su"]
-[ext_resource type="PackedScene" uid="uid://fnso5lndj3of" path="res://Tscn/Objects/Checkpoint.tscn" id="8_qhu7c"]
-[ext_resource type="PackedScene" uid="uid://qc5kk8xywph1" path="res://Tscn/Required/Background3D.tscn" id="9_e1u0q"]
-[ext_resource type="PackedScene" uid="uid://5qhfy2espvp1" path="res://Tscn/Objects/TennisLauncher.tscn" id="10_fb5s7"]
+[ext_resource type="PackedScene" uid="uid://dkh2kknuu37u" path="res://Tscn/Required/LevelCompleted.tscn" id="1_2ia87"]
+[ext_resource type="PackedScene" uid="uid://5qhfy2espvp1" path="res://Tscn/Objects/TennisLauncher.tscn" id="2_8tcy4"]
+[ext_resource type="PackedScene" uid="uid://qc5kk8xywph1" path="res://Tscn/Required/Background3D.tscn" id="3_g5kg7"]
+[ext_resource type="PackedScene" uid="uid://d0hgff003xq4r" path="res://Tscn/Required/Player.tscn" id="4_c4nwi"]
+[ext_resource type="PackedScene" uid="uid://cxrbn0ge4ms6h" path="res://Tscn/Required/WinCondition.tscn" id="5_ir5mb"]
+[ext_resource type="PackedScene" uid="uid://drv416k5abko7" path="res://Tscn/Required/HUD.tscn" id="6_mwdbx"]
+[ext_resource type="PackedScene" uid="uid://fnso5lndj3of" path="res://Tscn/Objects/Checkpoint.tscn" id="7_r6b63"]
+[ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="8_7x7iy"]
+[ext_resource type="PackedScene" uid="uid://cefcleb22ylx6" path="res://Tscn/Objects/PlaceholderObject.tscn" id="9_g3s25"]
+[ext_resource type="Texture2D" uid="uid://bnpcw7fvoq24x" path="res://Assets/CirclePlaceholder.png" id="10_slabt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sekj7"]
 
 [node name="Testmap" type="Node2D" unique_id=581708526]
 
-[node name="TennisLauncher" parent="." unique_id=1068618976 instance=ExtResource("10_fb5s7")]
-position = Vector2(-433, 298)
-
-[node name="Background3D" parent="." unique_id=682743684 instance=ExtResource("9_e1u0q")]
-
-[node name="Player" parent="." unique_id=1666780814 instance=ExtResource("1_o2mc1")]
-
-[node name="WinCondition" parent="." unique_id=1482428891 instance=ExtResource("2_fb5s7")]
-position = Vector2(7988, -4661)
-
-[node name="HUD" parent="." unique_id=2069383963 instance=ExtResource("3_ax7xh")]
-
-[node name="Level_Completed" parent="." unique_id=625890091 instance=ExtResource("4_b5mwe")]
+[node name="LevelCompleted" parent="." unique_id=625890091 instance=ExtResource("1_2ia87")]
 visible = false
 
-[node name="Checkpoint" parent="." unique_id=1113387631 instance=ExtResource("8_qhu7c")]
+[node name="TennisLauncher" parent="." unique_id=1068618976 instance=ExtResource("2_8tcy4")]
+position = Vector2(-433, 298)
+
+[node name="TennisLauncher2" parent="." unique_id=166365835 instance=ExtResource("2_8tcy4")]
+position = Vector2(-822, -913)
+
+[node name="Background3D" parent="." unique_id=682743684 instance=ExtResource("3_g5kg7")]
+
+[node name="Player" parent="." unique_id=1666780814 instance=ExtResource("4_c4nwi")]
+
+[node name="WinCondition" parent="." unique_id=1482428891 instance=ExtResource("5_ir5mb")]
+position = Vector2(6519, -3210)
+
+[node name="HUD" parent="." unique_id=2069383963 instance=ExtResource("6_mwdbx")]
+
+[node name="Checkpoint" parent="." unique_id=1113387631 instance=ExtResource("7_r6b63")]
 position = Vector2(2158, 29)
 
-[node name="Checkpoint2" parent="." unique_id=1912740212 instance=ExtResource("8_qhu7c")]
-position = Vector2(4128, -4628)
+[node name="Checkpoint2" parent="." unique_id=1912740212 instance=ExtResource("7_r6b63")]
+position = Vector2(2659, -3177)
 
 [node name="Label" type="Label" parent="." unique_id=173102857]
-offset_left = 7031.0
-offset_top = -4792.0
-offset_right = 8300.0
-offset_bottom = -4750.0
-theme_override_fonts/font = ExtResource("7_fe1su")
+offset_left = 5562.0
+offset_top = -3341.0
+offset_right = 6831.0
+offset_bottom = -3299.0
+theme_override_fonts/font = ExtResource("8_7x7iy")
 theme_override_font_sizes/font_size = 30
 text = "END OF DEMO. Go into the placeholder to finish the level, or listen to the music."
 
 [node name="Label2" type="Label" parent="." unique_id=380177038]
-offset_left = 4646.0
-offset_top = -4690.0
-offset_right = 5261.0
-offset_bottom = -4648.0
-theme_override_fonts/font = ExtResource("7_fe1su")
+offset_left = 3177.0
+offset_top = -3239.0
+offset_right = 3792.0
+offset_bottom = -3197.0
+theme_override_fonts/font = ExtResource("8_7x7iy")
 theme_override_font_sizes/font_size = 30
 text = "big leap."
 
-[node name="Copy2" parent="." unique_id=1235159681 instance=ExtResource("5_fwcfx")]
+[node name="Copy2" parent="." unique_id=1235159681 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(0, 402)
 scale = Vector2(32.16, 1.8)
 
-[node name="Copy3" parent="." unique_id=1053102703 instance=ExtResource("5_fwcfx")]
+[node name="Copy3" parent="." unique_id=1053102703 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(1146.0001, 243.00005)
 rotation = -0.26098868
 scale = Vector2(26.319998, 0.5999999)
 
-[node name="Copy11" parent="." unique_id=1328187938 instance=ExtResource("5_fwcfx")]
+[node name="Copy11" parent="." unique_id=1328187938 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(-3295, -1058.0002)
 rotation = 0.36320063
 scale = Vector2(26.319998, 0.5999999)
 
-[node name="Copy14" parent="." unique_id=908602278 instance=ExtResource("5_fwcfx")]
+[node name="Copy14" parent="." unique_id=908602278 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(-3185, -1874.0002)
 rotation = -0.35875425
 scale = Vector2(26.319998, 0.5999999)
 
-[node name="Copy7" parent="." unique_id=713408720 instance=ExtResource("5_fwcfx")]
+[node name="Copy7" parent="." unique_id=713408720 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(1117, -412.99988)
 rotation = 0.2617994
 scale = Vector2(26.319998, 0.5999999)
 
-[node name="Copy8" parent="." unique_id=79249858 instance=ExtResource("5_fwcfx")]
+[node name="Copy8" parent="." unique_id=79249858 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(-15.000002, -528)
 scale = Vector2(32.16, 1.8)
 
-[node name="Copy9" parent="." unique_id=1928585257 instance=ExtResource("5_fwcfx")]
+[node name="Copy9" parent="." unique_id=1928585257 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(-1267, -666.99994)
 scale = Vector2(32.16, 8.879999)
 
-[node name="Copy10" parent="." unique_id=1311758974 instance=ExtResource("5_fwcfx")]
+[node name="Copy10" parent="." unique_id=1311758974 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(-2187, -849)
 scale = Vector2(32.16, 2.599998)
 
-[node name="Copy18" parent="." unique_id=48133749 instance=ExtResource("5_fwcfx")]
+[node name="Copy18" parent="." unique_id=48133749 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(2690, -3040)
 scale = Vector2(32.16, 2.599998)
 
-[node name="Copy19" parent="." unique_id=171160351 instance=ExtResource("5_fwcfx")]
-position = Vector2(3575.9998, -3366.0002)
-scale = Vector2(32.16, 19.040003)
-
-[node name="Copy20" parent="." unique_id=1303217283 instance=ExtResource("5_fwcfx")]
-position = Vector2(4138, -4130)
-scale = Vector2(32.16, 19.040003)
-
-[node name="Copy16" parent="." unique_id=1595156639 instance=ExtResource("5_fwcfx")]
+[node name="Copy16" parent="." unique_id=1595156639 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(1740.9999, -2535.9998)
 rotation = -0.97388875
 scale = Vector2(32.16, 2.599998)
 
-[node name="Copy17" parent="." unique_id=1752076647 instance=ExtResource("5_fwcfx")]
+[node name="Copy17" parent="." unique_id=1752076647 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(1740.9999, -2535.9998)
 rotation = -0.97388875
 scale = Vector2(32.16, 2.599998)
 
-[node name="Copy15" parent="." unique_id=1885861766 instance=ExtResource("5_fwcfx")]
+[node name="Copy15" parent="." unique_id=1885861766 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(-645, -2020)
 scale = Vector2(103.48, 2.599998)
 
-[node name="Copy12" parent="." unique_id=911977441 instance=ExtResource("5_fwcfx")]
+[node name="Copy12" parent="." unique_id=911977441 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(-4416, -1205)
 scale = Vector2(32.16, 2.599998)
 
-[node name="Copy13" parent="." unique_id=568295583 instance=ExtResource("5_fwcfx")]
+[node name="Copy13" parent="." unique_id=568295583 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(-5107.0005, -1455)
 scale = Vector2(15.799999, 15.239998)
 
-[node name="Copy4" parent="." unique_id=316274720 instance=ExtResource("5_fwcfx")]
+[node name="Copy4" parent="." unique_id=316274720 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(2292.9998, 132)
 scale = Vector2(32.16, 1.8)
 
-[node name="Copy5" parent="." unique_id=795226963 instance=ExtResource("5_fwcfx")]
+[node name="Copy5" parent="." unique_id=795226963 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(3299.0002, -191)
 scale = Vector2(32.16, 18.119997)
 
-[node name="Copy6" parent="." unique_id=1483778848 instance=ExtResource("5_fwcfx")]
+[node name="Copy6" parent="." unique_id=1483778848 instance=ExtResource("9_g3s25")]
+z_index = -1
 position = Vector2(3449.0002, -525)
 scale = Vector2(24.6, 18.119997)
 
-[node name="Copy21" parent="." unique_id=1784560385 instance=ExtResource("5_fwcfx")]
-position = Vector2(7516, -4130)
+[node name="Copy21" parent="." unique_id=1784560385 instance=ExtResource("9_g3s25")]
+z_index = -1
+position = Vector2(6047, -2679)
 scale = Vector2(32.16, 19.040003)
 
 [node name="circl" type="StaticBody2D" parent="." unique_id=1737112578]
+z_index = -1
 texture_filter = 1
 position = Vector2(-599, -680)
 scale = Vector2(3, 3.48)
@@ -150,9 +164,10 @@ scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_sekj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="circl" unique_id=1963506374]
-texture = ExtResource("6_sxd26")
+texture = ExtResource("10_slabt")
 
 [node name="circl2" type="StaticBody2D" parent="." unique_id=1127999450]
+z_index = -1
 texture_filter = 1
 position = Vector2(-2116.0002, -2033)
 scale = Vector2(5, 5)
@@ -162,9 +177,10 @@ scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_sekj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="circl2" unique_id=1954552159]
-texture = ExtResource("6_sxd26")
+texture = ExtResource("10_slabt")
 
 [node name="circl3" type="StaticBody2D" parent="." unique_id=609472063]
+z_index = -1
 texture_filter = 1
 position = Vector2(-1155, -2094)
 scale = Vector2(5, 5)
@@ -174,9 +190,10 @@ scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_sekj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="circl3" unique_id=526891736]
-texture = ExtResource("6_sxd26")
+texture = ExtResource("10_slabt")
 
 [node name="circl4" type="StaticBody2D" parent="." unique_id=36192841]
+z_index = -1
 texture_filter = 1
 position = Vector2(-1155, -2094)
 scale = Vector2(5, 5)
@@ -186,9 +203,10 @@ scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_sekj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="circl4" unique_id=1289218676]
-texture = ExtResource("6_sxd26")
+texture = ExtResource("10_slabt")
 
 [node name="circl5" type="StaticBody2D" parent="." unique_id=1667628744]
+z_index = -1
 texture_filter = 1
 position = Vector2(-14.000122, -1972.0002)
 scale = Vector2(5, 5)
@@ -198,11 +216,12 @@ scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_sekj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="circl5" unique_id=1347131443]
-texture = ExtResource("6_sxd26")
+texture = ExtResource("10_slabt")
 
 [node name="circl6" type="StaticBody2D" parent="." unique_id=434897368]
+z_index = -1
 texture_filter = 1
-position = Vector2(4829, -4154)
+position = Vector2(3360, -2703)
 scale = Vector2(8.3, 8.3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="circl6" unique_id=1267532652]
@@ -210,11 +229,12 @@ scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_sekj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="circl6" unique_id=989454032]
-texture = ExtResource("6_sxd26")
+texture = ExtResource("10_slabt")
 
 [node name="circl7" type="StaticBody2D" parent="." unique_id=31889047]
+z_index = -1
 texture_filter = 1
-position = Vector2(6891, -4154)
+position = Vector2(5422, -2703)
 scale = Vector2(8.3, 8.3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="circl7" unique_id=1806351683]
@@ -222,4 +242,4 @@ scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_sekj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="circl7" unique_id=998309443]
-texture = ExtResource("6_sxd26")
+texture = ExtResource("10_slabt")

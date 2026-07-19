@@ -1,4 +1,5 @@
-extends Node2D
+extends Area2D
+@onready var player = get_tree().current_scene.get_node("Player")
 @export var broken = false
 @export var scene_to_spawn: PackedScene
 @export var launch_speed: float = 750.0
@@ -22,6 +23,14 @@ func _spawn() -> void:
 	get_tree().current_scene.add_child.call_deferred(instance)
 
 func _loop():
-	while true and !broken:
+	while true:
 		await get_tree().create_timer(rng.randf_range(0.3, 2)).timeout
-		_spawn()
+		if !broken:
+			_spawn()
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player") and !broken:
+		player.linear_velocity.y += 500
+		player.SCORE += 50
+		broken = true

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bdt74222n6qaa"]
 
-[ext_resource type="Script" uid="uid://dgvuacgo5wxdr" path="res://Scripts/Music_Controller.gd" id="1_v1ex1"]
+[ext_resource type="Script" uid="uid://dgvuacgo5wxdr" path="res://Scripts/Main.gd" id="1_v1ex1"]
 [ext_resource type="AudioStream" uid="uid://b3o1n5vp7m1c0" path="res://Assets/Music/golf2.ogg" id="2_v1ex1"]
 
-[node name="MusicController" type="Node" unique_id=78275217]
+[node name="Main" type="Node" unique_id=78275217]
 script = ExtResource("1_v1ex1")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1597619805]

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d0286jbj48mvn"]
+
+[ext_resource type="PackedScene" uid="uid://qc5kk8xywph1" path="res://Tscn/Required/Background3D.tscn" id="1_qcbjh"]
+[ext_resource type="PackedScene" uid="uid://drv416k5abko7" path="res://Tscn/Required/HUD.tscn" id="2_44ua5"]
+[ext_resource type="PackedScene" uid="uid://dkh2kknuu37u" path="res://Tscn/Required/LevelCompleted.tscn" id="3_s4doi"]
+[ext_resource type="PackedScene" uid="uid://d0hgff003xq4r" path="res://Tscn/Required/Player.tscn" id="4_8a8jm"]
+[ext_resource type="PackedScene" uid="uid://cxrbn0ge4ms6h" path="res://Tscn/Required/WinCondition.tscn" id="5_t8wr6"]
+[ext_resource type="PackedScene" uid="uid://cefcleb22ylx6" path="res://Tscn/Objects/PlaceholderObject.tscn" id="6_4dkeg"]
+
+[node name="1-1" type="Node2D" unique_id=1937658373]
+
+[node name="Background3D" parent="." unique_id=1979860615 instance=ExtResource("1_qcbjh")]
+
+[node name="HUD" parent="." unique_id=2069383963 instance=ExtResource("2_44ua5")]
+
+[node name="LevelCompleted" parent="." unique_id=625890091 instance=ExtResource("3_s4doi")]
+visible = false
+
+[node name="Player" parent="." unique_id=1666780814 instance=ExtResource("4_8a8jm")]
+
+[node name="WinCondition" parent="." unique_id=1482428891 instance=ExtResource("5_t8wr6")]
+position = Vector2(-550, 270)
+
+[node name="PlaceholderObject" parent="." unique_id=1328187938 instance=ExtResource("6_4dkeg")]
+position = Vector2(0, 349)
+scale = Vector2(30, 1)

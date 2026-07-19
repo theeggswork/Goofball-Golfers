@@ -2,7 +2,6 @@ extends Control
 @onready var player = get_tree().current_scene.get_node("Player")
 @onready var hud = get_tree().current_scene.get_node("HUD")
 @onready var nextlevel = $NextLevel
-var setup = Setup.new()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -27,4 +26,5 @@ func flag_reached():
 
 
 func _on_next_level_button_up() -> void:
-	print("WIP")
+	Main.LevelPointer = (Main.LevelPointer + 1) % Main.LevelList.size()
+	get_tree().change_scene_to_file(Main.LevelList[Main.LevelPointer])

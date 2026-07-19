@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://5qhfy2espvp1"]
 
-[ext_resource type="Script" uid="uid://crfw3d18m2thd" path="res://Scripts/tennis_launcher.gd" id="1_og3w6"]
-[ext_resource type="PackedScene" uid="uid://bhh0wplwip5um" path="res://Tscn/Objects/TennisBall.tscn" id="2_ptpas"]
+[ext_resource type="Script" uid="uid://crfw3d18m2thd" path="res://Scripts/Objects/TennisLauncher.gd" id="1_og3w6"]
+[ext_resource type="PackedScene" uid="uid://bhh0wplwip5um" path="res://TSCN/Objects/TennisBall.tscn" id="2_ptpas"]
 [ext_resource type="Texture2D" uid="uid://df037pg6qhrls" path="res://Assets/TL_FAIL1.svg" id="3_imhv2"]
 [ext_resource type="Texture2D" uid="uid://c0hyndqcghuwe" path="res://Assets/TL_DEFAULT.svg" id="3_ptpas"]
 [ext_resource type="Texture2D" uid="uid://bt77afra4jo7g" path="res://Assets/TL_FAIL2.svg" id="4_hoinr"]
 [ext_resource type="Texture2D" uid="uid://c7exrjv6abkgd" path="res://Assets/TL_FAIL3.svg" id="5_atd5r"]
 [ext_resource type="Texture2D" uid="uid://cm771ibs6b0ik" path="res://Assets/TL_FAIL4.svg" id="6_24h82"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_imhv2"]
+size = Vector2(18.777779, 20.666666)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ptpas"]
 animations = [{
@@ -36,16 +39,26 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="TennisLauncher" type="Node2D" unique_id=563301963]
-scale = Vector2(10, 10)
+[node name="TennisLauncher" type="Area2D" unique_id=166365835]
 script = ExtResource("1_og3w6")
-broken = true
 scene_to_spawn = ExtResource("2_ptpas")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87521037]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1672189210]
+position = Vector2(-5.499999, -48.7)
+scale = Vector2(4.5, 0.9000001)
+shape = SubResource("RectangleShape2D_imhv2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1389914701]
 texture_filter = 1
-position = Vector2(0, 0.90000004)
-scale = Vector2(0.1, 0.1)
+position = Vector2(0, 0.9)
 sprite_frames = SubResource("SpriteFrames_ptpas")
-animation = &"broken"
-frame_progress = 0.7255608
+frame_progress = 0.8777256
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=392454079]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2032960667]
+position = Vector2(-4.250003, 15.499996)
+scale = Vector2(4.5, 4.5)
+shape = SubResource("RectangleShape2D_imhv2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
