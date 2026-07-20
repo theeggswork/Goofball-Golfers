@@ -32,6 +32,8 @@ animations = [{
 
 [node name="Player" type="RigidBody2D" unique_id=1666780814]
 physics_material_override = SubResource("PhysicsMaterial_kpjcp")
+contact_monitor = true
+max_contacts_reported = 1
 script = ExtResource("1_kpjcp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=216202879]

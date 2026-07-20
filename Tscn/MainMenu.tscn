@@ -1,29 +1,37 @@
 [gd_scene format=3 uid="uid://ddswme5jlsi2g"]
 
 [ext_resource type="Script" uid="uid://b3b8u006mwe45" path="res://Scripts/MainMenu.gd" id="1_jqiue"]
-[ext_resource type="Texture2D" uid="uid://g2uolv60x0jf" path="res://Assets/GB_LOGO.svg" id="1_pbnla"]
 [ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="2_4y4hs"]
+[ext_resource type="PackedScene" uid="uid://qc5kk8xywph1" path="res://Tscn/Required/Background3D.tscn" id="4_7no70"]
 
 [node name="MainMenu" type="Control" unique_id=793153134]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_jqiue")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1949302716]
-position = Vector2(140, 135)
-texture = ExtResource("1_pbnla")
-
 [node name="PlayButton" type="Button" parent="." unique_id=639382744]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 270.0
-offset_right = 522.0
-offset_bottom = 299.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -14.5
+offset_right = 87.0
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_4y4hs")
-text = "Hello, Everybody. For Further Clarification, I Am A Button."
+text = "Start Puttin'"
+
+[node name="Background3D" parent="." unique_id=1979860615 instance=ExtResource("4_7no70")]
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

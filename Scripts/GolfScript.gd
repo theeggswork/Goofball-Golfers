@@ -30,6 +30,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
 func _physics_process(delta: float) -> void:
 	# Visuals
 	if gamefunc_enabled:
@@ -44,7 +45,7 @@ func _physics_process(delta: float) -> void:
 	# Putting System
 	var mouse_pos = get_global_mouse_position()
 	var direction = mouse_pos - global_position
-	var can_hit = speed < 150 and (abs(direction.x) + abs(direction.y)) < 650
+	var can_hit = get_colliding_bodies().size() > 0 and direction.length() < 450
 	if Input.is_action_just_released("Putt"):
 		line.clear_points()
 		if can_hit:
