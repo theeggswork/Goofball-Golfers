@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://d0286jbj48mvn"]
 
-[ext_resource type="PackedScene" uid="uid://qc5kk8xywph1" path="res://Tscn/Required/Background3D.tscn" id="1_qcbjh"]
-[ext_resource type="PackedScene" uid="uid://drv416k5abko7" path="res://Tscn/Required/HUD.tscn" id="2_44ua5"]
-[ext_resource type="PackedScene" uid="uid://dkh2kknuu37u" path="res://Tscn/Required/LevelCompleted.tscn" id="3_s4doi"]
-[ext_resource type="PackedScene" uid="uid://d0hgff003xq4r" path="res://Tscn/Required/Player.tscn" id="4_8a8jm"]
-[ext_resource type="PackedScene" uid="uid://cxrbn0ge4ms6h" path="res://Tscn/Required/WinCondition.tscn" id="5_t8wr6"]
-[ext_resource type="PackedScene" uid="uid://cefcleb22ylx6" path="res://Tscn/Objects/PlaceholderObject.tscn" id="6_4dkeg"]
+[ext_resource type="PackedScene" uid="uid://qc5kk8xywph1" path="res://TSCN/Required/Background3D.tscn" id="1_qcbjh"]
+[ext_resource type="PackedScene" uid="uid://drv416k5abko7" path="res://TSCN/Required/HUD.tscn" id="2_44ua5"]
+[ext_resource type="PackedScene" uid="uid://dkh2kknuu37u" path="res://TSCN/Required/LevelCompleted.tscn" id="3_s4doi"]
+[ext_resource type="PackedScene" uid="uid://d0hgff003xq4r" path="res://TSCN/Required/Player.tscn" id="4_8a8jm"]
+[ext_resource type="PackedScene" uid="uid://cxrbn0ge4ms6h" path="res://TSCN/Required/WinCondition.tscn" id="5_t8wr6"]
+[ext_resource type="PackedScene" uid="uid://cefcleb22ylx6" path="res://TSCN/Objects/PlaceholderObject.tscn" id="6_4dkeg"]
 
 [node name="TheFirstLevel" type="Node2D" unique_id=1937658373]
 

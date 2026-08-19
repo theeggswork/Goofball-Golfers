@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5qhfy2espvp1"]
 
 [ext_resource type="Script" uid="uid://crfw3d18m2thd" path="res://Scripts/Objects/TennisLauncher.gd" id="1_og3w6"]
-[ext_resource type="PackedScene" uid="uid://bhh0wplwip5um" path="res://TSCN/Objects/TennisBall.tscn" id="2_ptpas"]
+[ext_resource type="PackedScene" path="res://TSCN/Objects/TennisBall.tscn" id="2_ptpas"]
 [ext_resource type="Texture2D" uid="uid://df037pg6qhrls" path="res://Assets/TL_FAIL1.svg" id="3_imhv2"]
 [ext_resource type="Texture2D" uid="uid://c0hyndqcghuwe" path="res://Assets/TL_DEFAULT.svg" id="3_ptpas"]
 [ext_resource type="Texture2D" uid="uid://bt77afra4jo7g" path="res://Assets/TL_FAIL2.svg" id="4_hoinr"]

@@ -1,7 +1,6 @@
 extends Control
 @onready var totalputts = $TotalPutts
 @onready var timetaken = $TimeTaken
-@onready var debugspeed = $DEBUGSPEED
 @onready var score = $Score
 @onready var player = get_tree().current_scene.get_node("Player")
 # Called when the node enters the scene tree for the first time.
@@ -13,5 +12,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	totalputts.text = "Total Putts: " + str(player.totalputts)
 	timetaken.text = "Time Taken: " + str(snapped(player.timetaken, 0.1))
-	debugspeed.text = str(player.linear_velocity.length())
 	score.text = "Score: " + str(player.SCORE)

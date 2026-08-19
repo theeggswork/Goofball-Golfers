@@ -1,8 +1,8 @@
 extends Area2D
 @onready var player = get_tree().current_scene.get_node("Player")
 @export var broken = false
-@export var scene_to_spawn: PackedScene
 @export var launch_speed: float = 750.0
+@onready var scene_to_spawn = preload("res://TSCN/Objects/TennisBall.tscn")
 @onready var sprite2d = $AnimatedSprite2D
 var rng = RandomNumberGenerator.new()
 

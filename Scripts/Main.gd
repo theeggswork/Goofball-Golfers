@@ -14,7 +14,6 @@ func play_track(new_music: AudioStream):
 	if $AudioStreamPlayer2D.stream != new_music:
 		$AudioStreamPlayer2D.stream = new_music
 		$AudioStreamPlayer2D.play()
-		$AudioStreamPlayer2D
 func stop_music():
 	$AudioStreamPlayer2D.stop()
 func _on_audio_stream_player_2d_finished() -> void:

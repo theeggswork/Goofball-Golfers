@@ -1,53 +1,30 @@
 [gd_scene format=3 uid="uid://d0hgff003xq4r"]
 
-[ext_resource type="Script" uid="uid://ccgdie0mgw8wf" path="res://Scripts/GolfScript.gd" id="1_kpjcp"]
-[ext_resource type="Texture2D" uid="uid://cd7m57gah04p5" path="res://Assets/GB1.svg" id="2_64php"]
-[ext_resource type="Texture2D" uid="uid://dubt852bhqjol" path="res://Assets/GB2.svg" id="3_wd5xa"]
-[ext_resource type="Texture2D" uid="uid://dls1h5sle44l2" path="res://Assets/GB3.svg" id="4_gdl3b"]
-[ext_resource type="Texture2D" uid="uid://bnj3f3glnj10f" path="res://Assets/GB4.svg" id="5_t6iub"]
+[ext_resource type="Script" uid="uid://ccgdie0mgw8wf" path="res://Scripts/GolfScript.gd" id="1_qmuwt"]
+[ext_resource type="Texture2D" uid="uid://ccnlx8n22mgvt" path="res://Assets/GolfBall.svg" id="2_aq4ai"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kpjcp"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_kpjcp"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7n1bx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_64php")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_wd5xa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_gdl3b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_t6iub")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="CircleShape2D" id="CircleShape2D_7n1bx"]
+radius = 57.14018
 
 [node name="Player" type="RigidBody2D" unique_id=1666780814]
 physics_material_override = SubResource("PhysicsMaterial_kpjcp")
 contact_monitor = true
 max_contacts_reported = 1
-script = ExtResource("1_kpjcp")
+script = ExtResource("1_qmuwt")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1841514432]
 limit_smoothed = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=216202879]
-scale = Vector2(6, 6)
-shape = SubResource("CircleShape2D_kpjcp")
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1737696216]
 show_behind_parent = true
 width = 20.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1638136874]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1966987622]
 texture_filter = 1
-scale = Vector2(5.2, 5.2)
-sprite_frames = SubResource("SpriteFrames_7n1bx")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_aq4ai")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=30402806]
+shape = SubResource("CircleShape2D_7n1bx")

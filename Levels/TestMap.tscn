@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://b2pmlxmfkf4ub"]
 
-[ext_resource type="PackedScene" uid="uid://dkh2kknuu37u" path="res://Tscn/Required/LevelCompleted.tscn" id="1_2ia87"]
-[ext_resource type="PackedScene" uid="uid://5qhfy2espvp1" path="res://Tscn/Objects/TennisLauncher.tscn" id="2_8tcy4"]
-[ext_resource type="PackedScene" uid="uid://qc5kk8xywph1" path="res://Tscn/Required/Background3D.tscn" id="3_g5kg7"]
-[ext_resource type="PackedScene" uid="uid://d0hgff003xq4r" path="res://Tscn/Required/Player.tscn" id="4_c4nwi"]
-[ext_resource type="PackedScene" uid="uid://cxrbn0ge4ms6h" path="res://Tscn/Required/WinCondition.tscn" id="5_ir5mb"]
-[ext_resource type="PackedScene" uid="uid://drv416k5abko7" path="res://Tscn/Required/HUD.tscn" id="6_mwdbx"]
-[ext_resource type="PackedScene" uid="uid://fnso5lndj3of" path="res://Tscn/Objects/Checkpoint.tscn" id="7_r6b63"]
+[ext_resource type="PackedScene" uid="uid://dkh2kknuu37u" path="res://TSCN/Required/LevelCompleted.tscn" id="1_2ia87"]
+[ext_resource type="PackedScene" uid="uid://5qhfy2espvp1" path="res://TSCN/Objects/TennisLauncher.tscn" id="2_8tcy4"]
+[ext_resource type="PackedScene" uid="uid://qc5kk8xywph1" path="res://TSCN/Required/Background3D.tscn" id="3_g5kg7"]
+[ext_resource type="PackedScene" uid="uid://d0hgff003xq4r" path="res://TSCN/Required/Player.tscn" id="4_c4nwi"]
+[ext_resource type="PackedScene" uid="uid://cxrbn0ge4ms6h" path="res://TSCN/Required/WinCondition.tscn" id="5_ir5mb"]
+[ext_resource type="PackedScene" uid="uid://drv416k5abko7" path="res://TSCN/Required/HUD.tscn" id="6_mwdbx"]
+[ext_resource type="PackedScene" uid="uid://fnso5lndj3of" path="res://TSCN/Objects/Checkpoint.tscn" id="7_r6b63"]
 [ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="8_7x7iy"]
-[ext_resource type="PackedScene" uid="uid://cefcleb22ylx6" path="res://Tscn/Objects/PlaceholderObject.tscn" id="9_g3s25"]
+[ext_resource type="PackedScene" uid="uid://cefcleb22ylx6" path="res://TSCN/Objects/PlaceholderObject.tscn" id="9_g3s25"]
 [ext_resource type="Texture2D" uid="uid://bnpcw7fvoq24x" path="res://Assets/CirclePlaceholder.png" id="10_slabt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sekj7"]
@@ -20,12 +20,15 @@ visible = false
 
 [node name="TennisLauncher" parent="." unique_id=1068618976 instance=ExtResource("2_8tcy4")]
 position = Vector2(-433, 298)
+broken = null
+launch_speed = null
 
 [node name="TennisLauncher2" parent="." unique_id=166365835 instance=ExtResource("2_8tcy4")]
 position = Vector2(-822, -913)
+broken = null
+launch_speed = null
 
 [node name="Background3D" parent="." unique_id=682743684 instance=ExtResource("3_g5kg7")]
-player_override = true
 
 [node name="Player" parent="." unique_id=1666780814 instance=ExtResource("4_c4nwi")]
 

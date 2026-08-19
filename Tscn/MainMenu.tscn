@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ddswme5jlsi2g"]
 
-[ext_resource type="Script" uid="uid://b3b8u006mwe45" path="res://Scripts/MainMenu.gd" id="1_jqiue"]
-[ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="2_4y4hs"]
-[ext_resource type="PackedScene" uid="uid://qc5kk8xywph1" path="res://Tscn/Required/Background3D.tscn" id="4_7no70"]
+[ext_resource type="Script" uid="uid://b3b8u006mwe45" path="res://Scripts/MainMenu.gd" id="1_2p6o7"]
+[ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="2_md1rq"]
+[ext_resource type="PackedScene" uid="uid://qc5kk8xywph1" path="res://Tscn/Required/Background3D.tscn" id="3_5057r"]
 
 [node name="MainMenu" type="Control" unique_id=793153134]
 layout_mode = 3
@@ -14,7 +14,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.5, 1.5)
-script = ExtResource("1_jqiue")
+script = ExtResource("1_2p6o7")
 
 [node name="PlayButton" type="Button" parent="." unique_id=639382744]
 layout_mode = 1
@@ -29,9 +29,9 @@ offset_right = 87.0
 offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_4y4hs")
-text = "Start Puttin'"
+theme_override_fonts/font = ExtResource("2_md1rq")
+text = "Start The Game"
 
-[node name="Background3D" parent="." unique_id=1979860615 instance=ExtResource("4_7no70")]
+[node name="Background3D" parent="." unique_id=1979860615 instance=ExtResource("3_5057r")]
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

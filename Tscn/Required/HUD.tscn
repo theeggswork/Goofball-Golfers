@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drv416k5abko7"]
 
-[ext_resource type="Script" uid="uid://bwuen3r1o12aj" path="res://Scripts/HUD.gd" id="1_msu7g"]
+[ext_resource type="Script" uid="uid://bwuen3r1o12aj" path="res://Scripts/HUD.gd" id="1_k4tv3"]
 [ext_resource type="FontFile" uid="uid://dqmhhuhphyhfp" path="res://Assets/BlackOpsOne-Regular.ttf" id="2_10013"]
 
 [node name="HUD" type="CanvasLayer" unique_id=2069383963]
@@ -10,7 +10,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_msu7g")
+script = ExtResource("1_k4tv3")
 
 [node name="TotalPutts" type="Label" parent="Control" unique_id=1958165944]
 layout_mode = 0
@@ -38,7 +38,7 @@ offset_top = 625.0
 offset_right = 296.0
 offset_bottom = 648.0
 theme_override_fonts/font = ExtResource("2_10013")
-text = "Demo Build 71726 -- Subject To Change."
+text = "Build 81326 - Wow this game is ass at code management"
 
 [node name="Tips" type="Label" parent="Control" unique_id=1709053970]
 layout_mode = 0
@@ -48,22 +48,6 @@ offset_right = 1378.0
 offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("2_10013")
 text = "R To Reset To Latest Checkpoint."
-
-[node name="Tips2" type="Label" parent="Control" unique_id=364349566]
-layout_mode = 0
-offset_left = 893.0
-offset_top = 36.0
-offset_right = 1403.0
-offset_bottom = 59.0
-theme_override_fonts/font = ExtResource("2_10013")
-text = "A and D to move the smooths."
-
-[node name="DEBUGSPEED" type="Label" parent="Control" unique_id=777365534]
-layout_mode = 0
-offset_top = 127.0
-offset_right = 99.0
-offset_bottom = 150.0
-text = "debug speed"
 
 [node name="Score" type="Label" parent="Control" unique_id=65865860]
 layout_mode = 0
