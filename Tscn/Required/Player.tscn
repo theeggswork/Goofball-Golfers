@@ -5,6 +5,10 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kpjcp"]
 
+[sub_resource type="Curve" id="Curve_aq4ai"]
+_data = [Vector2(0.54581666, 1), 0.0, 0.0, 0, 0, Vector2(0.5458267, 0.70247936), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_7n1bx"]
 radius = 57.14018
 
@@ -20,6 +24,7 @@ limit_smoothed = true
 [node name="Line2D" type="Line2D" parent="." unique_id=1737696216]
 show_behind_parent = true
 width = 20.0
+width_curve = SubResource("Curve_aq4ai")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1966987622]
 texture_filter = 1

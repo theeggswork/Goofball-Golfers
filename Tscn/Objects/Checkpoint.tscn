@@ -1,19 +1,22 @@
 [gd_scene format=3 uid="uid://fnso5lndj3of"]
 
 [ext_resource type="Script" uid="uid://cri77gijlh3gm" path="res://Scripts/Objects/Checkpoint.gd" id="1_acy56"]
-[ext_resource type="Texture2D" uid="uid://gwngg6pc80fu" path="res://Assets/Placeholder_.png" id="2_acy56"]
+[ext_resource type="Texture2D" uid="uid://coriuiyt8tt7w" path="res://Assets/Flag.svg" id="2_6p3uk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acy56"]
+size = Vector2(12, 20.4)
 
 [node name="Checkpoint" type="Area2D" unique_id=1113387631]
 script = ExtResource("1_acy56")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2044068024]
-scale = Vector2(5, 5)
+position = Vector2(0, 0.99999905)
+scale = Vector2(7.5, 7.5)
 shape = SubResource("RectangleShape2D_acy56")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=968314930]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_acy56")
+texture_filter = 1
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_6p3uk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

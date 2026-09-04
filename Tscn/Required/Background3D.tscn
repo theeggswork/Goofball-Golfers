@@ -29,6 +29,7 @@ uv1_scale = Vector3(50, 50, 50)
 layer = -1
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=49054747]
+texture_filter = 1
 offset_right = 40.0
 offset_bottom = 40.0
 

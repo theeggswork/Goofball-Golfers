@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df037pg6qhrls"
-path="res://.godot/imported/TL_FAIL1.svg-370563bfe18e3a944eb063e1e6c41dad.ctex"
+uid="uid://ca5havlthyqy1"
+path="res://.godot/imported/GoldenFlag.svg-97505f43ec67a2117cd970f68df748e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TL_FAIL1.svg"
-dest_files=["res://.godot/imported/TL_FAIL1.svg-370563bfe18e3a944eb063e1e6c41dad.ctex"]
+source_file="res://Assets/GoldenFlag.svg"
+dest_files=["res://.godot/imported/GoldenFlag.svg-97505f43ec67a2117cd970f68df748e9.ctex"]
 
 [params]
 
@@ -38,6 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
+svg/scale=10.0
 editor/scale_with_editor_scale=false
 editor/convert_colors_with_editor_theme=false

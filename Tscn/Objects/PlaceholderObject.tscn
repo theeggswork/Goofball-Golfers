@@ -4,11 +4,26 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3w8a"]
 
+[sub_resource type="ArrayMesh" id="ArrayMesh_hkhv2"]
+_surfaces = [{
+"2d": true,
+"aabb": AABB(-20, -20, 0, 40, 40, 0),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0),
+"format": 34393296913,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 2, 0, 2, 0, 1, 0, 0, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 160, 193, 0, 0, 160, 193, 0, 0, 160, 193, 0, 0, 160, 65, 0, 0, 160, 65, 0, 0, 160, 65, 0, 0, 160, 65, 0, 0, 160, 193)
+}]
+
 [node name="PlaceholderObject" type="StaticBody2D" unique_id=1328187938]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1486151027]
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_y3w8a")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1800280222]
+[node name="Sprite2D" type="MeshInstance2D" parent="." unique_id=229698523]
+mesh = SubResource("ArrayMesh_hkhv2")
 texture = ExtResource("1_1oo83")

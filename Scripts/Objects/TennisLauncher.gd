@@ -3,7 +3,6 @@ extends Area2D
 @export var broken = false
 @export var launch_speed: float = 750.0
 @onready var scene_to_spawn = preload("res://TSCN/Objects/TennisBall.tscn")
-@onready var sprite2d = $AnimatedSprite2D
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
